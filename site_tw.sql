@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 14 2023 г., 10:33
+-- Время создания: Мар 14 2023 г., 13:41
 -- Версия сервера: 10.4.27-MariaDB
 -- Версия PHP: 8.2.0
 
@@ -60,7 +60,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `role` varchar(50) NOT NULL DEFAULT 'user',
   `phone` varchar(20) NOT NULL,
   `region` varchar(50) NOT NULL,
@@ -74,9 +74,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `phone`, `region`, `area`, `locality`, `created`) VALUES
-(1, 'Admin', 'admin@i.ua', 'admin1', 'admin', '+380', '', '', '', '2023-03-11 18:12:05'),
-(2, 'User1', 'user1@i.ua', 'user1', 'user', '+380', '', '', '', '2023-03-11 18:12:05'),
-(3, 'User2', 'user2@i.ua', 'user2', 'user', '', '', '', '', '2023-03-11 20:05:25');
+(1, 'Admin', 'admin@i.ua', '$2y$10$xh202snU0Rc/KFrDnodBVOSP4UtfS9RgYP9VmLvcjAyhQgz4g4cE.', 'admin', '+380', '', '', '', '2023-03-11 18:12:05'),
+(2, 'User1', 'user1@i.ua', '$2y$10$0xFcFDLE.TvrMJfqwKdvHeJD4bWPWGN9.t.GxRPFeAOqCZrRE6Sxa', 'user', '+380', '', '', '', '2023-03-11 18:12:05'),
+(3, 'John Do', 'user2@i.ua', '$2y$10$1OYhCsuASSJicDsxyWeMy.XliCL.khpQBGY5lFJaLMPfcpVPS1Bw2', 'user', '', '', '', '', '2023-03-11 20:05:25'),
+(4, 'Админ', 'adm@i.ua', '$2y$10$nJ8oWxzMC4j9KJhyoXokaunkWjw0nwNootavGpvdTC6wXJNozqsvi', 'admin', '', '', '', '', '2023-03-14 12:53:45');
 
 --
 -- Индексы сохранённых таблиц
@@ -108,7 +109,7 @@ ALTER TABLE `pets`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

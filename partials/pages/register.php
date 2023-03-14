@@ -3,12 +3,13 @@ require($_SERVER['DOCUMENT_ROOT'].'/partials/header.php');
 
 if (!empty($_POST)) {
   //echo $_POST['name'] . " - " . $_POST['email'] . " - " . $_POST['password'] . "<br>";
-  $sql = "INSERT INTO `users` (`username`, `email`, `password`) VALUES ('" . $_POST['name'] . "', '" . $_POST['email'] . "', '" . $_POST['password'] . "');";
+  $hasPas = password_hash($_POST['password'], PASSWORD_DEFAULT);
+  $sql = "INSERT INTO `users` (`username`, `email`, `password`) VALUES ('" . $_POST['name'] . "', '" . $_POST['email'] . "', '" . $hasPas . "');";
   //INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `phone`) VALUES (NULL, '', '', '', '', '');
   if (mysqli_query($conn, $sql)) {
-    echo "Stored." . "<br>";
+    //echo "Stored." . "<br>";
     mysqli_close($conn);
-    echo "<script> document.location.href='/'; </script>";
+    header("Location: /");
   } else {
     echo "Error:" . $sql . "<br>" . mysqli_error($conn);
   }
@@ -16,12 +17,11 @@ if (!empty($_POST)) {
 mysqli_close($conn);
 ?>
 
-  <form action="#" method="POST">
+  <form method="POST">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-4">
-          <div class="_lk_de">
-            <div class="form-03-main">
+
               <div class="logo">
                 <img src="/assets/images/user.png">
               </div>
@@ -43,28 +43,10 @@ mysqli_close($conn);
 
               <div class="form-group">
                 <div class="_btn_04">
-                  <!-- <a href="#">Sign up</a> -->
-                  <button type="submit">Sign up</button>
+                  <button type="submit" name="submit">Sign up</button>
                 </div>
               </div>
 
-              <!-- <div class="form-group nm_lk">
-                <p>Or Login With</p>
-              </div>
-
-              <div class="form-group pt-0">
-                <div class="_social_04">
-                  <ol>
-                    <li><i class="fa fa-facebook"></i></li>
-                    <li><i class="fa fa-twitter"></i></li>
-                    <li><i class="fa fa-google-plus"></i></li>
-                    <li><i class="fa fa-instagram"></i></li>
-                    <li><i class="fa fa-linkedin"></i></li>
-                  </ol>
-                </div>
-              </div> -->
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -17,15 +17,14 @@ if (isAuth()){
 ?>
  
   <?php 
-      // если сесия "существует" и Не равна null  
-      if (isset($_SESSION['user_id']) && $_SESSION['user_id'] != null) {
-        echo '<a class="nav-link active" href="partials/pages/logout.php">Logout</a>'; // выводим ссылочку на  Logout
-      } else if (isset($_COOKIE['user_id']) && $_COOKIE['user_id'] != null) {
-        echo '<a class="nav-link active" href="partials/pages/logout.php">Logout</a>';
+      // если пользователь зарегистрировался (сессия или куки)  
+      if (isAuth ()) {
+        // выводим ссылочку на  Logout
+        echo '<a class="nav-link active" href="partials/pages/logout.php">Logout</a>'; 
       } else {
         // выводим ссылочки на Login & Register
         echo '<a class="nav-link active" href="partials/pages/login.php">Login </a>';
-        echo '<a class="nav-link"href="partials/pages/register.php"> Register</a>';
+        echo '<a class="nav-link" href="partials/pages/register.php"> Register</a>';
     }
   ?>
   

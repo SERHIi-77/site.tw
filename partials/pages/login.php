@@ -1,17 +1,16 @@
-
 <?php
 require($_SERVER['DOCUMENT_ROOT'].'/partials/header.php');
 
 if(isset($_POST['submit'])):
   $email = $_POST['email'];
   $password = $_POST['password'];
-  $sql = "SELECT * FROM users WHERE `username` = '$email'";
+  $sql = "SELECT * FROM users WHERE email = '$email'";
   $result = $conn->query($sql);
   $user = $result->fetch_assoc();
-
+  var_dump($user['password']);
   if (password_verify($password, $user['password'])) {
-      //succes
-      //echo('You autorisation');
+      //succes password_verify($password, $user['password'])
+      echo('You autorisation');
       // initialize cookies for the logged in user
       if(isset($_POST['remember'])) {
         setcookie("user_id", $user['id'], time()+3600*12, "/");
@@ -25,7 +24,7 @@ if(isset($_POST['submit'])):
       $_SESSION["user_id"] = null;
       setcookie('user_id', '', 0, '/' );
       echo ('password failed');
-      header("Location: #");
+      // header("Location: #");
   }
 
 endif;
@@ -62,7 +61,7 @@ endif;
         <div class="form-group">
           <div class="_btn_04">
             <!-- <a href="#">Login</a> -->
-            <button type="submit">Login</button>
+            <button type="submit" name="submit">Login</button>
           </div>
         </div>
       </div>
