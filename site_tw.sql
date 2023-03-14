@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 11 2023 г., 23:51
+-- Время создания: Мар 14 2023 г., 10:33
 -- Версия сервера: 10.4.27-MariaDB
 -- Версия PHP: 8.2.0
 
@@ -29,22 +29,26 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `pets` (
   `id` int(11) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `ad` varchar(255) NOT NULL,
   `type` varchar(20) NOT NULL,
   `sex` varchar(10) NOT NULL,
   `age` varchar(10) NOT NULL,
   `breed` varchar(20) NOT NULL,
   `owner` int(10) NOT NULL,
   `price` varchar(10) NOT NULL,
-  `note` varchar(255) NOT NULL
+  `photo` varchar(255) NOT NULL,
+  `note` varchar(255) NOT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Дамп данных таблицы `pets`
 --
 
-INSERT INTO `pets` (`id`, `type`, `sex`, `age`, `breed`, `owner`, `price`, `note`) VALUES
-(1, 'dog', 'male', '5', 'бульдог', 0, '100', 'бульдог'),
-(2, 'cat', 'female', '4', 'ориентал', 0, '300', 'красивая кошечка');
+INSERT INTO `pets` (`id`, `title`, `ad`, `type`, `sex`, `age`, `breed`, `owner`, `price`, `photo`, `note`, `created`) VALUES
+(1, '', '', 'dog', 'male', '5', 'бульдог', 0, '100', '', 'бульдог', '2023-03-14 01:55:42'),
+(2, '', '', 'cat', 'female', '4', 'ориентал', 0, '300', '', 'красивая кошечка', '2023-03-14 01:55:42');
 
 -- --------------------------------------------------------
 
@@ -59,6 +63,9 @@ CREATE TABLE `users` (
   `password` varchar(50) NOT NULL,
   `role` varchar(50) NOT NULL DEFAULT 'user',
   `phone` varchar(20) NOT NULL,
+  `region` varchar(50) NOT NULL,
+  `area` varchar(50) NOT NULL,
+  `locality` varchar(100) NOT NULL,
   `created` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -66,10 +73,10 @@ CREATE TABLE `users` (
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `phone`, `created`) VALUES
-(1, 'Admin', 'admin@i.ua', 'admin1', 'admin', '+380', '2023-03-11 18:12:05'),
-(2, 'User1', 'user1@i.ua', 'user1', 'user', '+380', '2023-03-11 18:12:05'),
-(3, 'User2', 'user2@i.ua', 'user2', 'user', '', '2023-03-11 20:05:25');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `phone`, `region`, `area`, `locality`, `created`) VALUES
+(1, 'Admin', 'admin@i.ua', 'admin1', 'admin', '+380', '', '', '', '2023-03-11 18:12:05'),
+(2, 'User1', 'user1@i.ua', 'user1', 'user', '+380', '', '', '', '2023-03-11 18:12:05'),
+(3, 'User2', 'user2@i.ua', 'user2', 'user', '', '', '', '', '2023-03-11 20:05:25');
 
 --
 -- Индексы сохранённых таблиц
