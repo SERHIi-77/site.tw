@@ -8,19 +8,20 @@
 </footer>
   
   <script src="/assets/js/popper.min.js"></script>
-  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/jquery.min.js"></script>  <!--тут последня версия jquery -->
   <script src="/assets/js/bootstrap.min.js"></script>
+  <!-- <script src="/assets/js/bootstrap.bundle.min.js"></script> -->
   <script type="text/javaScript" src="/assets/slick/slick.min.js"></script>
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-<script type="text/javaScript" src="/assets/slick/slick.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javaScript" src="/assets/slick/slick.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
   <script src="/assets/js/slider.js"></script>
-  <!-- <script src="/assets/js/bootstrap.bundle.min.js"></script> -->
+
 
 
 </body>

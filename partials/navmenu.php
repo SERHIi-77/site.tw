@@ -14,7 +14,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Your personal menu</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Add an Ad</a></li>
+                                <li><a class="dropdown-item" href="/partials/ads/add_ad.php">Add an Ad</a></li>
                                 <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Personal page</a></li>
