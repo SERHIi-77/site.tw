@@ -31,6 +31,13 @@ if($result = $conn->query($sql)):
     endforeach;
 endif;
 ?>             -->
+<div class="product-card"></div>
+<div class="product-card"></div>
+<div class="product-card"></div>
+<div class="product-card"></div>
+<div class="product-card"></div>
+<div class="product-card"></div>
+<div class="product-card"></div>
             <div class="product-card"></div>
             <div class="product-card"></div>            
             <div class="product-card"></div>
