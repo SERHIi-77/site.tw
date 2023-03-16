@@ -24,6 +24,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
 
   <meta name="theme-color" content="#fafafa">
   
+  <link rel="stylesheet" type="text/css" href="assets/news/news.css"/>
   <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
