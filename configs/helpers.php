@@ -43,7 +43,7 @@ function getUserID() {
 
 function getAllAdsByUser($userID) {
     global $conn;
-    $sql = "SELECT * FROM posts WHERE user_id=" . $userID . " ORDER BY id DESC";
+    $sql = "SELECT * FROM pets WHERE user_id=" . $userID . " ORDER BY id DESC";
     $result = mysqli_query($conn, $sql);
     return $result;
 }
