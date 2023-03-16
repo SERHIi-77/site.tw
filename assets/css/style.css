@@ -221,14 +221,21 @@ display: flex;
 }
 .catalog-post-general{
     max-width: 1280px;
-    height: 1800px;
-    background-color: pink;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+gap: 10px;
+align-items: flex-start;
+justify-content: space-evenly;
     flex-shrink: 1;
 }
+.slick-prev {
+    font-size: 50px; /* Установите желаемый размер */
+  }
+  
+  /* Выберите элемент стрелки вправо */
+  .slick-next {
+    font-size: 50px; /* Установите желаемый размер */
+  }
 
 .product-card{
     width: 300px;
@@ -236,6 +243,49 @@ display: flex;
     background-color: white;
     cursor: pointer;
 }
+/* КНОПКИ СЛАЙДЕРА */
+.slick-prev:before {
+    font-size: 40px; /* Установить желаемый размер */
+    color: rgb(238, 133, 6); /* Установить желаемый цвет */
+    left: 30px;
+}
+.slick-next:before {
+    font-size: 40px; /* Установить желаемый размер */
+    color: rgb(238, 133, 6); /* Установить желаемый цвет */
+}
+.slick-prev {
+    position: absolute;
+    left: 30px; /* Установить желаемое значение */
+    top: 50%; /* Установить желаемое значение для вертикального выравнивания */
+    transform: translateY(-50%); /* Центрирует элемент по вертикали */
+    z-index: 500;
+  }
+  .slick-next {
+    position: absolute;
+    right: 40px; /* Установить желаемое значение */
+    top: 50%; /* Установить желаемое значение для вертикального выравнивания */
+    transform: translateY(-50%); /* Центрирует элемент по вертикали */
+    z-index: 500;
+  }
+  .menuBurgerUser{
+    width: 40px;
+    height: 40px;
+    background: url(../img/slider2/user.svg);
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    position: relative;
+  }
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 .test{
