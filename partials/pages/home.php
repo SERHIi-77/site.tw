@@ -5,17 +5,17 @@
           <div class="reviews-client">
             <img src="../assets/img/home/3.jpg" alt="">
             <span class="name-review">Nastasya F.</span>
-            <p class="text-review">Моя шана, ви робите велику справу для усшх нас. Велике дякую вам від маленької Сонечки</p>
+            <p class="text-review">Моя шана, ви робите велику справу для усіх нас. Велике дякую вам від маленької Сонечки</p>
           </div>
           <div class="reviews-client">
             <img src="../assets/img/home/2.jpg" alt="">
             <span class="name-review">Bogdan R.</span>
-            <p class="text-review">Моя шана, ви робите велику справу для усшх нас. Велике дякую вам від маленької Сонечки</p>
+            <p class="text-review">Моя шана, ви робите велику справу для усіх нас. Велике дякую вам від маленької Сонечки</p>
           </div>
           <div class="reviews-client">
             <img src="../assets/img/home/1.jpg" alt="">
             <span class="name-review">Robert M.</span>
-            <p class="text-review">Моя шана, ви робите велику справу для усшх нас. Велике дякую вам від маленької Сонечки</p>
+            <p class="text-review">Моя шана, ви робите велику справу для усіх нас. Велике дякую вам від маленької Сонечки</p>
           </div>  
         </div>
         <div class="top-menu-slide-and">
