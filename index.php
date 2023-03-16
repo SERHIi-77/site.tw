@@ -1,10 +1,12 @@
-<?php
-
-require($_SERVER['DOCUMENT_ROOT'].'/partials/header.php');
-require($_SERVER['DOCUMENT_ROOT'].'/partials/navbar.php');
-require($_SERVER['DOCUMENT_ROOT'].'/partials/navmenu.php');
-
-?>
+<div class="head-container" >
+	<div class="header-general">
+		<?php
+		require($_SERVER['DOCUMENT_ROOT'].'/partials/header.php');
+		require($_SERVER['DOCUMENT_ROOT'].'/partials/navbar.php');
+		require($_SERVER['DOCUMENT_ROOT'].'/partials/navmenu.php');
+		?>
+	</div>
+</div>
 <!-- Add your site or application content here -->
 
 <?php

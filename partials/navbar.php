@@ -4,7 +4,7 @@ if (isAuth()){
     $user = getCurrentUser();
 ?>
   <span class="nav-item">
-    <h4> Hello, <?php echo $user['username'] ?></h4>  
+    <h4> Hello, <br> <?php echo $user['username'] ?></h4>  
   </span>
 <?php        
 } else {

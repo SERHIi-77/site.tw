@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 ><a href="index.php">Logo</a></h1>
+    <h1 ><img src="/assets/img/header/paw1.svg" alt="paw1"><a href="index.php">Пухнасті лапки</a><img src="/assets/img/header/paw2.svg" alt="paw1"></h1>
     <nav class="nav nav-fill navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto text-center">
