@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 14 2023 г., 13:41
+-- Время создания: Мар 16 2023 г., 22:23
 -- Версия сервера: 10.4.27-MariaDB
 -- Версия PHP: 8.2.0
 
@@ -47,8 +47,8 @@ CREATE TABLE `pets` (
 --
 
 INSERT INTO `pets` (`id`, `title`, `ad`, `type`, `sex`, `age`, `breed`, `owner`, `price`, `photo`, `note`, `created`) VALUES
-(1, '', '', 'dog', 'male', '5', 'бульдог', 0, '100', '', 'бульдог', '2023-03-14 01:55:42'),
-(2, '', '', 'cat', 'female', '4', 'ориентал', 0, '300', '', 'красивая кошечка', '2023-03-14 01:55:42');
+(1, 'Kind lonely girl looking for a family', 'A kind girl named Lyubimitsa is looking for a family, she came to us from the Donetsk region in search of a new home. very fond of children and walks, has a red coat color and a wonderful character', 'dog', 'male', '5', 'бульдог', 0, '100', 'Bulldog.jpg', 'бульдог', '2023-03-14 01:55:42'),
+(2, 'Persian cat of standard color', 'Persian cat of standard color is looking for a new family, loves milk and sweet dreams, will always be grateful for a good company on a beautiful evening.', 'cat', 'female', '4', 'ориентал', 0, '300', 'persiancat.jpg', 'красивая кошечка', '2023-03-14 01:55:52');
 
 -- --------------------------------------------------------
 
@@ -75,8 +75,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `phone`, `region`, `area`, `locality`, `created`) VALUES
 (1, 'Admin', 'admin@i.ua', '$2y$10$xh202snU0Rc/KFrDnodBVOSP4UtfS9RgYP9VmLvcjAyhQgz4g4cE.', 'admin', '+380', '', '', '', '2023-03-11 18:12:05'),
-(2, 'User1', 'user1@i.ua', '$2y$10$0xFcFDLE.TvrMJfqwKdvHeJD4bWPWGN9.t.GxRPFeAOqCZrRE6Sxa', 'user', '+380', '', '', '', '2023-03-11 18:12:05'),
-(3, 'John Do', 'user2@i.ua', '$2y$10$1OYhCsuASSJicDsxyWeMy.XliCL.khpQBGY5lFJaLMPfcpVPS1Bw2', 'user', '', '', '', '', '2023-03-11 20:05:25'),
+(2, 'ZooSweat', 'user1@i.ua', '$2y$10$0xFcFDLE.TvrMJfqwKdvHeJD4bWPWGN9.t.GxRPFeAOqCZrRE6Sxa', 'user', '+380', '', '', '', '2023-03-11 18:12:05'),
+(3, 'nursery \"friend\"', 'user2@i.ua', '$2y$10$1OYhCsuASSJicDsxyWeMy.XliCL.khpQBGY5lFJaLMPfcpVPS1Bw2', 'user', '', '', '', '', '2023-03-11 20:05:25'),
 (4, 'Админ', 'adm@i.ua', '$2y$10$nJ8oWxzMC4j9KJhyoXokaunkWjw0nwNootavGpvdTC6wXJNozqsvi', 'admin', '', '', '', '', '2023-03-14 12:53:45');
 
 --
@@ -103,7 +103,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pets`
 --
 ALTER TABLE `pets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
