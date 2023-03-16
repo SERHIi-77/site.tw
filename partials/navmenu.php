@@ -17,7 +17,7 @@
                                 <li><a class="dropdown-item" href="/partials/ads/add_ad.php">Add an Ad</a></li>
                                 <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Personal page</a></li>
+                                <li><a class="dropdown-item" href="/admin/index.php">Personal page</a></li>
                             </ul>
                         </li>
                 <?php endif ?>

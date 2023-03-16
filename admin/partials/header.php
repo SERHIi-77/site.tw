@@ -1,3 +1,13 @@
+<?php
+// connecting DB
+require($_SERVER['DOCUMENT_ROOT'].'/configs/db.php');
+// open session for user
+//session_start();
+
+require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,6 +1,8 @@
 <nav class="nav justify-content-end">
 <?php
-if (isAuth()){
+
+// проверяем сесия или куки
+if (isAuth ()){
     $user = getCurrentUser();
 ?>
   <span class="nav-item">
