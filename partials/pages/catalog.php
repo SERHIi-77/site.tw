@@ -15,35 +15,23 @@ if($result = $conn->query($sql)):
 ?>
             <!-- стандартная карточка товара/ аналог карточки статьи в блоге в 13 уроке- подтянет данные из бд -->
             <div class="product-card">
-                <img src="/uploads/<?php echo($row['photo']);?>" alt="">
-                <span><?php echo ($row['title']);?></span>
-                <p><?php echo ($row['ad']);?></p>
-                <div>
+                <div class="foto-of-pet"><img src="/uploads/<?php echo($row['photo']);?>" alt=""></div>
+                <span class="title-pet"><p> <?php echo ($row['title']);?></p></span>
+                <p class="histopy-of-pet"><?php echo ($row['ad']);?></p>
+                <div class="one-str-type-card">
                     <p><?php echo ($row['type']);?></p>
                     <p><?php echo ($row['sex']);?></p>
                     <p><?php echo ($row['age']);?></p>
                 </div>
                 <h4><?php echo ($row['price']);?></h4>
-                <p><?php echo ($row['breed']);?></p><p><?php echo ($row['note']);?></p>
+                <div class="breed-note"><p><?php echo ($row['breed']);?></p><p><?php echo ($row['note']);?></p></div>
                 <p><?php echo ($row['created']);?></p>
             </div>
 <!-- <?php
     endforeach;
 endif;
 ?>             -->
-<div class="product-card"></div>
-<div class="product-card"></div>
-<div class="product-card"></div>
-<div class="product-card"></div>
-<div class="product-card"></div>
-<div class="product-card"></div>
-<div class="product-card"></div>
-            <div class="product-card"></div>
-            <div class="product-card"></div>            
-            <div class="product-card"></div>
-            <div class="product-card"></div>           
-            <div class="product-card"></div>
-            <div class="product-card"></div>
+
         </div>
     </div>
 </div>

@@ -1,9 +1,10 @@
 
 
-<div class="menuBurgerUser">
-    
+<div class="menuBurgerUser"> 
+  <img src="../assets/img/header/user.svg">
 </div>
 
+<div class="container-user-burger">
 
 <nav class="nav justify-content-end">
 <?php
@@ -38,3 +39,5 @@ if (isAuth ()){
   ?>
   
 </nav>
+
+</div>

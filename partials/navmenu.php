@@ -1,8 +1,12 @@
 <div class="container">
-    <h1 ><img src="/assets/img/header/paw1.svg" alt="paw1"><a href="index.php">Пухнасті лапки</a><img src="/assets/img/header/paw2.svg" alt="paw1"></h1>
-    <nav class="nav nav-fill navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav me-auto text-center">
+    
+    
+        <div class=burgermenu-nav-main>
+            <span><img src="../assets/img/header/paw.svg"></span>
+            <p> MENU</p>
+        </div>
+        <div class="navbar-change">
+            <ul class="navbar-change-k">
                 <li class="nav-item" ><a class="nav-link<?php if(!isset($_GET['p']) || $_GET['p'] == 'home'): ?> active<?php endif ?>" aria-current="page" href="/?p=home">Home</a></li>
                 <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'catalog'): ?> active<?php endif ?>" href="/?p=catalog">Catalog</a></li>
                 <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'about'): ?> active<?php endif ?>" href="/?p=about">About</a></li>
@@ -23,5 +27,9 @@
                 <?php endif ?>
             </ul>
         </div>
-    </nav>
+        <h1 ><img src="/assets/img/header/paw1.svg" alt="paw1"><a href="index.php">Пухнасті лапки</a><img src="/assets/img/header/paw2.svg" alt="paw1"></h1>
+        <form id="search-input" class="search-input">
+            <input  type="text" name="query" placeholder="Пощук сайту...">
+            <button  type="submit">Знайти</button>
+        </form>
 </div>

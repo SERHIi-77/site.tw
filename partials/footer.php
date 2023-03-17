@@ -21,7 +21,7 @@
 
 
   <script src="/assets/js/slider.js"></script>
-
+  <!-- <script src="/assets/js/search.js"></script> -->
 
 
 </body>
