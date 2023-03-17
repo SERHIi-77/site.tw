@@ -53,8 +53,8 @@
         </li>
 
         <li>
-          <a class="dropdown-item d-flex align-items-center" href="?p=view-ads">
-            <i class="bi bi-gear"></i>
+          <a class="dropdown-item d-flex align-items-center" href="?p=ads">
+            <i class="bi bi-card-list"></i>
             <span>My Ads</span>
           </a>
         </li>
@@ -63,8 +63,28 @@
         </li>
 
         <li>
+          <a class="dropdown-item d-flex align-items-center" href="?p=favorites">
+            <i class="bi bi-heart"></i>
+            <span>My Favorites</span>
+          </a>
+        </li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+
+        <li>
+          <a class="dropdown-item d-flex align-items-center" href="?p=orders">
+            <i class="bi bi-bag-heart"></i>
+            <span>My Orders</span>
+          </a>
+        </li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+
+        <li>
           <a class="dropdown-item d-flex align-items-center" href="/index.php">
-            <i class="bi bi-box-arrow-right"></i>
+            <i class="bi bi-box-arrow-left"></i>
             <span>Sign Out</span>
           </a>
         </li>

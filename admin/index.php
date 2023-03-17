@@ -24,11 +24,14 @@ if (isset($_GET['p'])) {
 		case 'edit-profile':
 			$page = '/admin/partials/pages/edit-profile';
 			break;
-		case 'view-ads':
-			$page = '/admin/partials/pages/view-ads';
+		case 'ads':
+			$page = '/admin/partials/pages/ads';
 			break;
-		case 'edit-ad':
-			$page = '/admin/partials/pages/edit-ad';
+		case 'favorites':
+			$page = '/admin/partials/pages/favorites';
+			break;
+		case 'orders':
+			$page = '/admin/partials/pages/orders';
 			break;
     default:
 			$page = '/admin/partials/pages/view-profile';

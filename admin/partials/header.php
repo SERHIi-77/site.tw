@@ -2,7 +2,7 @@
 // connecting DB
 require($_SERVER['DOCUMENT_ROOT'].'/configs/db.php');
 // open session for user
-//session_start();
+session_start();
 
 require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
 
