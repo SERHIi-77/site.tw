@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 17 2023 г., 16:15
+-- Время создания: Мар 17 2023 г., 20:19
 -- Версия сервера: 10.4.27-MariaDB
 -- Версия PHP: 8.2.0
 
@@ -90,6 +90,11 @@ CREATE TABLE `users` (
   `region` varchar(50) NOT NULL,
   `area` varchar(50) NOT NULL,
   `locality` varchar(100) NOT NULL,
+  `avatar` varchar(255) NOT NULL DEFAULT 'noimg.jpg',
+  `tg` varchar(50) NOT NULL,
+  `fb` varchar(50) NOT NULL,
+  `inst` varchar(50) NOT NULL,
+  `about` varchar(255) NOT NULL,
   `created` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -97,12 +102,12 @@ CREATE TABLE `users` (
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `phone`, `region`, `area`, `locality`, `created`) VALUES
-(1, 'Admin', 'admin@i.ua', '$2y$10$xh202snU0Rc/KFrDnodBVOSP4UtfS9RgYP9VmLvcjAyhQgz4g4cE.', 'admin', '+380', '', '', '', '2023-03-11 18:12:05'),
-(2, 'ZooSweat', 'user1@i.ua', '$2y$10$0xFcFDLE.TvrMJfqwKdvHeJD4bWPWGN9.t.GxRPFeAOqCZrRE6Sxa', 'user', '+380', '', '', '', '2023-03-11 18:12:05'),
-(3, 'nursery \"friend\"', 'user2@i.ua', '$2y$10$1OYhCsuASSJicDsxyWeMy.XliCL.khpQBGY5lFJaLMPfcpVPS1Bw2', 'user', '', '', '', '', '2023-03-11 20:05:25'),
-(4, 'Админ', 'adm@i.ua', '$2y$10$nJ8oWxzMC4j9KJhyoXokaunkWjw0nwNootavGpvdTC6wXJNozqsvi', 'admin', '', '', '', '', '2023-03-14 12:53:45'),
-(8, 'kosss', 'kosss@i.ua', '$2y$10$.xXRIqFXwnIg4NuWREYoPey/AAh6kizQTjOwkuhkWCUWut/Ok0FnS', 'user', '', '', '', '', '2023-03-17 14:17:50');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `phone`, `region`, `area`, `locality`, `avatar`, `tg`, `fb`, `inst`, `about`, `created`) VALUES
+(1, 'Admin', 'admin@i.ua', '$2y$10$xh202snU0Rc/KFrDnodBVOSP4UtfS9RgYP9VmLvcjAyhQgz4g4cE.', 'admin', '+380', '', '', '', 'admin.jpg', '', '', '', '', '2023-03-11 18:12:05'),
+(2, 'ZooSweat', 'user1@i.ua', '$2y$10$0xFcFDLE.TvrMJfqwKdvHeJD4bWPWGN9.t.GxRPFeAOqCZrRE6Sxa', 'user', '+380', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-11 18:12:05'),
+(3, 'nursery \"friend\"', 'user2@i.ua', '$2y$10$1OYhCsuASSJicDsxyWeMy.XliCL.khpQBGY5lFJaLMPfcpVPS1Bw2', 'user', '', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-11 20:05:25'),
+(4, 'Админ', 'adm@i.ua', '$2y$10$nJ8oWxzMC4j9KJhyoXokaunkWjw0nwNootavGpvdTC6wXJNozqsvi', 'admin', '', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-14 12:53:45'),
+(8, 'kosss', 'kosss@i.ua', '$2y$10$.xXRIqFXwnIg4NuWREYoPey/AAh6kizQTjOwkuhkWCUWut/Ok0FnS', 'user', '', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-17 14:17:50');
 
 --
 -- Индексы сохранённых таблиц
