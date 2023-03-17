@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 17 2023 г., 20:19
+-- Время создания: Мар 17 2023 г., 16:15
 -- Версия сервера: 10.4.27-MariaDB
 -- Версия PHP: 8.2.0
 
@@ -133,7 +133,11 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pets`
 --
 ALTER TABLE `pets`
+<<<<<<< HEAD
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+=======
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+>>>>>>> 047ed38130dc5d61f02f38aed38f71aa7455ecec
 
 --
 -- AUTO_INCREMENT для таблицы `users`
