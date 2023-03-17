@@ -21,8 +21,13 @@ if(!empty($_FILES) && $_FILES['photo']['error'] != 4) {
 }
 if (isset($_POST['submit'])) {
 	//var_dump($_POST);
+    $adTitle = mysqli_real_escape_string($conn, $_POST["title"]);
+    $adAd = mysqli_real_escape_string($conn, $_POST["ad"]);
+    $adBreed = mysqli_real_escape_string($conn, $_POST["breed"]);
+    $adPrice = mysqli_real_escape_string($conn, $_POST["price"]);
+    $adNote = mysqli_real_escape_string($conn, $_POST["note"]);
 
-	$sql = "INSERT INTO pets (title, ad, type, sex, age, breed, owner, price, photo, note) VALUES ('" . $_POST["title"] . "', '" . $_POST["ad"] . "', '" . $_POST["type"] . "', '" . $_POST["sex"] . "', '" . $_POST["age"] . "', '" . $_POST["breed"] . "', '" . $_POST["owner"] . "', '" . $_POST["price"] . "', '" . $photoName . "', '" . $_POST["note"] . "' )";
+	$sql = "INSERT INTO pets (title, ad, type, sex, age, breed, owner, price, photo, note) VALUES ('$adTitle', '$adAd', '" . $_POST["type"] . "', '" . $_POST["sex"] . "', '" . $_POST["age"] . "', '$adBreed', '" . $_POST["owner"] . "', '$adPrice', '" . $photoName . "', '$adNote' )";
 	// INSERT INTO `pets` (`id`, `title`, `ad`, `type`, `sex`, `age`, `breed`, `owner`, `price`, `photo`, `note`, `created`) VALUES (NULL, '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', current_timestamp());
 
 	if (mysqli_query($conn, $sql)) {
