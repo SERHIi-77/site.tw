@@ -1,0 +1,182 @@
+.pattern {
+    background: #e2d9d9;
+    position: relative;
+    padding: 150px;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.pattern:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: fixed url(../img/contact/contact1.jpg) repeat;
+    opacity: 0.25;
+}
+
+
+.pattern .center {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 60px 30px;
+    text-align: center;
+}
+.center {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.center p {
+    font-size: xx-large;
+    color: brown;
+    text-align: center;
+    font-family: cursive;
+}
+
+
+.center h2 {
+    text-align: center;
+    font-size: xxx-large;
+    color: brown;
+    font-family: cursive;
+}
+
+.contribution-banner .center:before {
+    left: 20px;
+    width: 241px;
+    height: 153px;
+    margin-top: -76.5px;
+    background-image: url(../img/contact/contact1.jpg);
+}
+.contribution-banner .center:before, .contribution-banner .center:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    background: left center no-repeat;
+    background-size: contain;
+}
+.contribution-banner .center:before {
+    left: 20px;
+    width: 241px;
+    height: 153px;
+    margin-top: -76.5px;
+    background-image: url(/assets/img/header/paw1.svg);
+}
+
+.contribution-banner .center:after {
+    right: 20px;
+    width: 176px;
+    height: 152px;
+    margin-top: -76px;
+    background-image: url(/assets/img/header/paw2.svg);
+    background-position: right center;
+}
+
+
+@media screen and (max-width: 650px) {
+.contribution-banner .center {
+    padding: 20px 150px;
+}
+}
+
+
+@media screen and (max-width: 900px) {
+.contribution-banner .center {
+    padding: 20px 150px !important;
+    font-size: 30px;
+    min-height: 110px;
+}
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.justify-content-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-direction: row-reverse;
+}
+
+.donation {
+    /* height: 560px; */
+    margin: 80px 0;
+    width: 100%;
+    background-color: #fcbd4d;
+}
+.donation__container h2.section-header {
+    text-align: center;
+    /* margin-top: 80px; */
+}
+h2.section-header {
+    margin-top: 20px;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #221e1f;
+    text-transform: uppercase;
+}
+
+
+
+.donation__action button {
+    margin: 40px;
+    width: 350px;
+    height: 80px;
+    border-radius: 80px;
+    border: solid 3px #221e1f;
+    font-size: 30px;
+    font-weight: 900;
+    padding-left: 75px;
+    text-transform: uppercase;
+    text-align: left;
+    background: #f4f3f1 url(/assets/img/contact/mono1.jpg) no-repeat 270px;
+    background-size: 57px 50px;
+}
+.donation__description {
+    font-size: 20px;
+    color: brown;
+    text-align: center;
+    font-family: cursive;
+}
+
+.col-lg-12 {
+    flex: 0 0 auto;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+}
+
+#form-donate {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.justify-content-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}

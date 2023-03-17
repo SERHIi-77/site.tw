@@ -24,6 +24,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
 
   <meta name="theme-color" content="#fafafa">
   
+  <link rel="stylesheet" type="text/css" href="assets/contact/contact.css"/>
   <link rel="stylesheet" type="text/css" href="assets/news/news.css"/>
   <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
