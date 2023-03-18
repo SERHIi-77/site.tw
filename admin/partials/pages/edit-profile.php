@@ -1,29 +1,30 @@
-<!-- <?php
+<?php
+$user = getCurrentUser();
 $userID = getUserID();
 
 if (isset($_POST['profile-submit'])) {
-	//var_dump($_POST);
-    $adTitle = mysqli_real_escape_string($conn, $_POST["title"]);
-    $adAd = mysqli_real_escape_string($conn, $_POST["ad"]);
-    $adBreed = mysqli_real_escape_string($conn, $_POST["breed"]);
-    $adPrice = mysqli_real_escape_string($conn, $_POST["price"]);
-    $adNote = mysqli_real_escape_string($conn, $_POST["note"]);
-
-	//$sql = "INSERT INTO pets (title, ad, type, sex, age, breed, owner, price, photo, note) VALUES ('$adTitle', '$adAd', '" . $_POST["type"] . "', '" . $_POST["sex"] . "', '" . $_POST["age"] . "', '$adBreed', '" . $_POST["owner"] . "', '$adPrice', '" . $photoName . "', '$adNote' )";
-	$sql = "UPDATE users SET avatar = '" . $photoName . "' WHERE id = $userID";
-  // INSERT INTO `pets` (`id`, `title`, `ad`, `type`, `sex`, `age`, `breed`, `owner`, `price`, `photo`, `note`, `created`) VALUES (NULL, '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', current_timestamp());
+	// var_dump($_POST);
+  // die();
+    $uUsername = mysqli_real_escape_string($conn, $_POST["username"]);
+    $uEmail = mysqli_real_escape_string($conn, $_POST["email"]);
+    $uPhone = mysqli_real_escape_string($conn, $_POST["phone"]);
+    $uRegion = mysqli_real_escape_string($conn, $_POST["region"]);
+    $uArea = mysqli_real_escape_string($conn, $_POST["area"]);
+    $uLocality = mysqli_real_escape_string($conn, $_POST["locality"]);
+    $uAbout = mysqli_real_escape_string($conn, $_POST["about"]);
+	
+	$sql = "UPDATE users SET username = '" . $uUsername . "', email = '" . $uEmail . "', phone = '" . $uPhone . "', region = '" . $uRegion . "', area = '" . $uArea . "', locality = '" . $uLocality . "', about = '" . $uAbout . "' WHERE id = $userID";
+  //UPDATE `users` SET `phone` = '1', `region` = '1', `area` = '1', `locality` = '1', `avatar` = '2', `tg` = '1', `fb` = '1', `inst` = '1', `about` = '1' WHERE `users`.`id` = 4;
 
 	if (mysqli_query($conn, $sql)) {
-
-		header("Location: /?p=catalog");
-
+    //header("Location: " . $_SERVER['DOCUMENT_ROOT'].'/admin/index.php');
+    //header('Location: ' . $_SERVER['PHP_SELF']);
 	} else {
 		echo "Error:" . $sql . "<br>" . mysqli_error($conn);
 	}
-
 }
 
-?> -->
+?>
 
 <section class="section profile">
       <div class="row">
@@ -62,7 +63,7 @@ if (isset($_POST['profile-submit'])) {
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Ім'я</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="<?php echo $user['username'] ?>">
+                        <input name="username" type="text" class="form-control" id="fullName" value="<?php echo $user['username'] ?>">
                       </div>
                     </div>
 
@@ -108,27 +109,6 @@ if (isset($_POST['profile-submit'])) {
                       </div>
                     </div>
 
-                    <div class="row mb-3">
-                      <label for="telegram" class="col-md-4 col-lg-3 col-form-label">Telegram Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="tg" type="text" class="form-control" id="telegram" value="<?php echo $user['tg'] ?>">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="fb" type="text" class="form-control" id="Facebook" value="<?php echo $user['fb'] ?>">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="inst" type="text" class="form-control" id="Instagram" value="<?php echo $user['fb'] ?>">
-                      </div>
-                    </div>
-
                     <div class="text-center">
                       <button name="profile-submit" type="submit" class="btn btn-primary">Save Changes</button>
                     </div>
@@ -138,7 +118,7 @@ if (isset($_POST['profile-submit'])) {
 
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
-                  <?php require($_SERVER['DOCUMENT_ROOT'].'/admin/partials/pages/edit-profile-pass.php'); ?>
+                  <?php include($_SERVER['DOCUMENT_ROOT'].'/admin/partials/pages/edit-profile-pass.php'); ?>
                   <!-- End Change Password Form -->
 
                 </div>
