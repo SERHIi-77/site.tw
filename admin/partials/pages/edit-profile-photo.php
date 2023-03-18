@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
 
 }
 ?>
-<form action="#" method="POST">
+<form action="edit=profile-photo.php" method="POST">
     <div class="row mb-3">
         <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Зображення профілю</label>
         <div class="col-md-8 col-lg-9">
