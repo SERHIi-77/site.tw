@@ -1,26 +1,24 @@
 <?php
+$user = getCurrentUser();
 $userID = getUserID();
 
 if (isset($_POST['profile-submit'])) {
-	//var_dump($_POST);
+	// var_dump($_POST);
+  // die();
     $uUsername = mysqli_real_escape_string($conn, $_POST["username"]);
     $uEmail = mysqli_real_escape_string($conn, $_POST["email"]);
     $uPhone = mysqli_real_escape_string($conn, $_POST["phone"]);
     $uRegion = mysqli_real_escape_string($conn, $_POST["region"]);
     $uArea = mysqli_real_escape_string($conn, $_POST["area"]);
     $uLocality = mysqli_real_escape_string($conn, $_POST["locality"]);
-    $uTg = mysqli_real_escape_string($conn, $_POST["tg"]);
-    $uFb = mysqli_real_escape_string($conn, $_POST["fb"]);
-    $uInst = mysqli_real_escape_string($conn, $_POST["inst"]);
     $uAbout = mysqli_real_escape_string($conn, $_POST["about"]);
 	
-	$sql = "UPDATE users SET username = '" . $uUsername . "', email = '" . $uEmail . "', email = '" . $uPhone . "', email = '" . $uRegion . "', email = '" . $uArea . "', email = '" . $uLocality . "', email = '" . $uTg . "', email = '" . $uFb . "', email = '" . $uInst . "', email = '" . $uAbout . "' WHERE id = $userID";
+	$sql = "UPDATE users SET username = '" . $uUsername . "', email = '" . $uEmail . "', phone = '" . $uPhone . "', region = '" . $uRegion . "', area = '" . $uArea . "', locality = '" . $uLocality . "', about = '" . $uAbout . "' WHERE id = $userID";
   //UPDATE `users` SET `phone` = '1', `region` = '1', `area` = '1', `locality` = '1', `avatar` = '2', `tg` = '1', `fb` = '1', `inst` = '1', `about` = '1' WHERE `users`.`id` = 4;
 
 	if (mysqli_query($conn, $sql)) {
-
-		header("Location: /?p=catalog");
-
+    //header("Location: " . $_SERVER['DOCUMENT_ROOT'].'/admin/index.php');
+    //header('Location: ' . $_SERVER['PHP_SELF']);
 	} else {
 		echo "Error:" . $sql . "<br>" . mysqli_error($conn);
 	}
@@ -65,7 +63,7 @@ if (isset($_POST['profile-submit'])) {
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Ім'я</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="<?php echo $user['username'] ?>">
+                        <input name="username" type="text" class="form-control" id="fullName" value="<?php echo $user['username'] ?>">
                       </div>
                     </div>
 
@@ -108,27 +106,6 @@ if (isset($_POST['profile-submit'])) {
                       <label for="email" class="col-md-4 col-lg-3 col-form-label">E-mail</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="email" type="email" class="form-control" id="email" value="<?php echo $user['email'] ?>">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="telegram" class="col-md-4 col-lg-3 col-form-label">Telegram Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="tg" type="text" class="form-control" id="telegram" value="<?php echo $user['tg'] ?>">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="fb" type="text" class="form-control" id="Facebook" value="<?php echo $user['fb'] ?>">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="inst" type="text" class="form-control" id="Instagram" value="<?php echo $user['fb'] ?>">
                       </div>
                     </div>
 

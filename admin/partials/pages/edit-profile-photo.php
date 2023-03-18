@@ -15,20 +15,25 @@ if(!empty($_FILES) && $_FILES['avatar']['error'] != 4) {
     $uploadfile = $uploaddir . $photoName;
 
 // проверка успешной загрузки файла картинки
-    if (!move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile)) {
+    if (!move_uploaded_file($_FILES['avatar']['tmp_name'], $uploadfile)) {
         echo "Возможная атака с помощью файловой загрузки!\n";
         die();
     }
 }
     switch(true) {
         case isset($_POST['photo_submit']):
-            $sql = "UPDATE users SET avatar = '" . $photoName . "' WHERE id = $userID"; 
+            echo($photoName);
+            $sql = "UPDATE users SET avatar = '" . $photoName . "' WHERE id = $userID";
+            mysqli_query($conn, $sql); 
             break;
         case isset($_POST['delete_submit']):
-            $sql = "UPDATE users SET avatar = '' WHERE id = $userID";
+            echo("Ok");
+            $sql = "UPDATE users SET avatar = 'noimg.jpg' WHERE id = $userID";
+            mysqli_query($conn, $sql);
             break;
         default:
           // Код для выполнения в случае, если не был получен ни один из указанных запросов
+          
           break;
       }
 ?>
@@ -40,7 +45,7 @@ if(!empty($_FILES) && $_FILES['avatar']['error'] != 4) {
         <img src="/uploads/avatars/<?php echo $user['avatar'] ?>" alt="Profile">
         <div class="pt-2">
         <i class="ti-image btn-icon-prepend"></i>   
-            <input id="photoProfile" type="file" name="avatar" class="file-upload-default-sm"></input>    
+            <input id="avatarProfile" type="file" name="avatar" class="file-upload-default-sm"></input>    
             <button type="submit" name="photo_submit" class="btn btn-primary btn-sm"><i class="bi bi-upload"></i></button>
             <button type="submit" name="delete_submit" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
             
