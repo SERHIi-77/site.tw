@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 if (isset($_POST['submit'])) {
 	//var_dump($_POST);
@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
 
 }
 
-?>
+?> -->
 
 <section class="section profile">
       <div class="row">
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
 
                   <!-- Profile Edit Form -->
                   
-                  <?php require($_SERVER['DOCUMENT_ROOT'].'/admin/partials/pages/edit-profile-photo.php'); ?>
+                  <?php include($_SERVER['DOCUMENT_ROOT'].'/admin/partials/pages/edit-profile-photo.php'); ?>
                     
                   <form>
 

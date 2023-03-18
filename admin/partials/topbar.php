@@ -36,7 +36,7 @@
       <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
         <li class="dropdown-header">
           <h6><?php echo $user['username'] ?></h6>
-          <span>---</span>
+          <span><?php echo $user['role'] ?></span>
         </li>
         <li>
           <hr class="dropdown-divider">
