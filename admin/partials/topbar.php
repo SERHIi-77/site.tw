@@ -1,4 +1,3 @@
-<?php $user = getCurrentUser(); ?>
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
 
@@ -29,14 +28,15 @@
     <li class="nav-item dropdown pe-3">
 
       <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <img src="/uploads/avatars/<?php echo $user['avatar'] ?>" alt="Profile" class="rounded-circle">
+        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+        <?php $user = getCurrentUser(); ?>
         <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $user['username'] ?></span>
       </a><!-- End Profile Iamge Icon -->
 
       <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
         <li class="dropdown-header">
           <h6><?php echo $user['username'] ?></h6>
-          <span><?php echo $user['role'] ?></span>
+          <span>---</span>
         </li>
         <li>
           <hr class="dropdown-divider">

@@ -15,18 +15,7 @@ if ( typeof jQuery !== "undefined" ) {
  
 // код для бургеров
 
-// const containerUserBurger = document.querySelector(".container-user-burger");
-// const menuBurgerUser = document.querySelector(".menuBurgerUser");
 
-// menuBurgerUser.addEventListener("click", () => {
-//   containerUserBurger.style.display = "flex";
-// });
-
-// document.addEventListener("click", (event) => {
-//   if (!menuBurgerUser.contains(event.target)) {
-//     containerUserBurger.style.display = "none";
-//   }
-// });
 
 const containerUserBurger = document.querySelector(".container-user-burger");
 const menuBurgerUser = document.querySelector(".menuBurgerUser");
@@ -94,4 +83,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+// скрул кнопка ап
 
+$(function(){
+  $(window).scroll(function(){
+      if($(this).scrollTop() > 1000) 
+      $(".scrolling").fadeIn();
+      else
+      $(".scrolling").fadeOut(400);
+  })
+})

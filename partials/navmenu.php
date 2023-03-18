@@ -7,21 +7,21 @@
         </div>
         <div class="navbar-change">
             <ul class="navbar-change-k">
-                <li class="nav-item" ><a class="nav-link<?php if(!isset($_GET['p']) || $_GET['p'] == 'home'): ?> active<?php endif ?>" aria-current="page" href="/?p=home">Home</a></li>
-                <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'catalog'): ?> active<?php endif ?>" href="/?p=catalog">Catalog</a></li>
-                <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'about'): ?> active<?php endif ?>" href="/?p=about">About</a></li>
-                <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'contact'): ?> active<?php endif ?>" href="/?p=contact">Contact</a></li>
+                <li class="nav-item" ><a class="nav-link<?php if(!isset($_GET['p']) || $_GET['p'] == 'home'): ?> active<?php endif ?>" aria-current="page" href="/?p=home">Головна</a></li>
+                <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'catalog'): ?> active<?php endif ?>" href="/?p=catalog">Каталог</a></li>
+                <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'about'): ?> active<?php endif ?>" href="/?p=about">Новини</a></li>
+                <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'contact'): ?> active<?php endif ?>" href="/?p=contact">Допомога</a></li>
                 
                 <?php // добавляем менюшку если залогирован пользователь
                     if(isAuth ()):
                       ?>  
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Your personal menu</a>
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Додати об'яву</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/partials/ads/add_ad.php">Add an Ad</a></li>
-                                <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/admin/index.php">Personal page</a></li>
+                                <li><a class="dropdown-item" href="/partials/ads/add_ad.php">Нова об'ява</a></li>
+                                <li><a class="dropdown-item" href="#">Правила</a></li>
+                                <!-- <li><hr class="dropdown-divider"></li> -->
+                                <li><a class="dropdown-item" href="/admin/index.php">Кабинет</a></li>
                             </ul>
                         </li>
                 <?php endif ?>

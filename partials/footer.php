@@ -1,4 +1,4 @@
-<footer class="bg-light text-center text-lg-start">
+<footer class="bg-light text-center text-lg-start" id="color-footer">
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © <script>document.write(new Date().getFullYear());</script> Copyright:
@@ -6,7 +6,7 @@
   </div>
   <!-- Copyright -->
 </footer>
-  
+  <a href="#" class="scrolling">UP</a>
   <script src="/assets/js/popper.min.js"></script>
   <script src="/assets/js/jquery.min.js"></script>  <!--тут последня версия jquery -->
   <script src="/assets/js/bootstrap.min.js"></script>

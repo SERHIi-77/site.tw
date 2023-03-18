@@ -2,13 +2,13 @@
     box-sizing: border-box;
 }
 .grid {
-    width: 100%;
-    margin-top: 150px;
+    max-width: 1480px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 30px;
     row-gap: 30px;
-    padding: 20px 20px;
+    padding: 150px 20px;
 }
 /* Кол-во блоков на разных экранах */
 @media only screen and (max-width: 1200px) {
