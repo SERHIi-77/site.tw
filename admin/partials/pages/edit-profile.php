@@ -1,17 +1,21 @@
-<!-- <?php
+<?php
 $userID = getUserID();
 
 if (isset($_POST['profile-submit'])) {
 	//var_dump($_POST);
-    $adTitle = mysqli_real_escape_string($conn, $_POST["title"]);
-    $adAd = mysqli_real_escape_string($conn, $_POST["ad"]);
-    $adBreed = mysqli_real_escape_string($conn, $_POST["breed"]);
-    $adPrice = mysqli_real_escape_string($conn, $_POST["price"]);
-    $adNote = mysqli_real_escape_string($conn, $_POST["note"]);
-
-	//$sql = "INSERT INTO pets (title, ad, type, sex, age, breed, owner, price, photo, note) VALUES ('$adTitle', '$adAd', '" . $_POST["type"] . "', '" . $_POST["sex"] . "', '" . $_POST["age"] . "', '$adBreed', '" . $_POST["owner"] . "', '$adPrice', '" . $photoName . "', '$adNote' )";
-	$sql = "UPDATE users SET avatar = '" . $photoName . "' WHERE id = $userID";
-  // INSERT INTO `pets` (`id`, `title`, `ad`, `type`, `sex`, `age`, `breed`, `owner`, `price`, `photo`, `note`, `created`) VALUES (NULL, '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', current_timestamp());
+    $uUsername = mysqli_real_escape_string($conn, $_POST["username"]);
+    $uEmail = mysqli_real_escape_string($conn, $_POST["email"]);
+    $uPhone = mysqli_real_escape_string($conn, $_POST["phone"]);
+    $uRegion = mysqli_real_escape_string($conn, $_POST["region"]);
+    $uArea = mysqli_real_escape_string($conn, $_POST["area"]);
+    $uLocality = mysqli_real_escape_string($conn, $_POST["locality"]);
+    $uTg = mysqli_real_escape_string($conn, $_POST["tg"]);
+    $uFb = mysqli_real_escape_string($conn, $_POST["fb"]);
+    $uInst = mysqli_real_escape_string($conn, $_POST["inst"]);
+    $uAbout = mysqli_real_escape_string($conn, $_POST["about"]);
+	
+	$sql = "UPDATE users SET username = '" . $uUsername . "', email = '" . $uEmail . "', email = '" . $uPhone . "', email = '" . $uRegion . "', email = '" . $uArea . "', email = '" . $uLocality . "', email = '" . $uTg . "', email = '" . $uFb . "', email = '" . $uInst . "', email = '" . $uAbout . "' WHERE id = $userID";
+  //UPDATE `users` SET `phone` = '1', `region` = '1', `area` = '1', `locality` = '1', `avatar` = '2', `tg` = '1', `fb` = '1', `inst` = '1', `about` = '1' WHERE `users`.`id` = 4;
 
 	if (mysqli_query($conn, $sql)) {
 
@@ -20,10 +24,9 @@ if (isset($_POST['profile-submit'])) {
 	} else {
 		echo "Error:" . $sql . "<br>" . mysqli_error($conn);
 	}
-
 }
 
-?> -->
+?>
 
 <section class="section profile">
       <div class="row">
@@ -138,7 +141,7 @@ if (isset($_POST['profile-submit'])) {
 
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
-                  <?php require($_SERVER['DOCUMENT_ROOT'].'/admin/partials/pages/edit-profile-pass.php'); ?>
+                  <?php include($_SERVER['DOCUMENT_ROOT'].'/admin/partials/pages/edit-profile-pass.php'); ?>
                   <!-- End Change Password Form -->
 
                 </div>
