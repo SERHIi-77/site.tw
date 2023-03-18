@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 17 2023 г., 16:15
+-- Время создания: Мар 18 2023 г., 17:01
 -- Версия сервера: 10.4.27-MariaDB
 -- Версия PHP: 8.2.0
 
@@ -106,7 +106,7 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `phone`, `re
 (1, 'Admin', 'admin@i.ua', '$2y$10$xh202snU0Rc/KFrDnodBVOSP4UtfS9RgYP9VmLvcjAyhQgz4g4cE.', 'admin', '+380', '', '', '', 'admin.jpg', '', '', '', '', '2023-03-11 18:12:05'),
 (2, 'ZooSweat', 'user1@i.ua', '$2y$10$0xFcFDLE.TvrMJfqwKdvHeJD4bWPWGN9.t.GxRPFeAOqCZrRE6Sxa', 'user', '+380', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-11 18:12:05'),
 (3, 'nursery \"friend\"', 'user2@i.ua', '$2y$10$1OYhCsuASSJicDsxyWeMy.XliCL.khpQBGY5lFJaLMPfcpVPS1Bw2', 'user', '', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-11 20:05:25'),
-(4, 'Админ', 'adm@i.ua', '$2y$10$nJ8oWxzMC4j9KJhyoXokaunkWjw0nwNootavGpvdTC6wXJNozqsvi', 'admin', '', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-14 12:53:45'),
+(4, 'Админ', 'adm@i.ua', '$2y$10$nJ8oWxzMC4j9KJhyoXokaunkWjw0nwNootavGpvdTC6wXJNozqsvi', 'admin', '+', '', '', '', '1', '', '', '', '', '2023-03-14 12:53:45'),
 (8, 'kosss', 'kosss@i.ua', '$2y$10$.xXRIqFXwnIg4NuWREYoPey/AAh6kizQTjOwkuhkWCUWut/Ok0FnS', 'user', '', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-17 14:17:50');
 
 --
@@ -133,17 +133,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pets`
 --
 ALTER TABLE `pets`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-=======
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
->>>>>>> 047ed38130dc5d61f02f38aed38f71aa7455ecec
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
