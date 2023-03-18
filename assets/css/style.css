@@ -249,12 +249,10 @@ justify-content: space-evenly;
     flex-shrink: 1;
 }
 .slick-prev {
-    font-size: 50px; /* Установите желаемый размер */
+    font-size: 50px;
   }
-  
-  /* Выберите элемент стрелки вправо */
   .slick-next {
-    font-size: 50px; /* Установите желаемый размер */
+    font-size: 50px;
   }
 
 .product-card{
