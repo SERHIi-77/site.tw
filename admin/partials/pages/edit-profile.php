@@ -1,6 +1,7 @@
 <!-- <?php
+$userID = getUserID();
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['profile-submit'])) {
 	//var_dump($_POST);
     $adTitle = mysqli_real_escape_string($conn, $_POST["title"]);
     $adAd = mysqli_real_escape_string($conn, $_POST["ad"]);
@@ -8,8 +9,9 @@ if (isset($_POST['submit'])) {
     $adPrice = mysqli_real_escape_string($conn, $_POST["price"]);
     $adNote = mysqli_real_escape_string($conn, $_POST["note"]);
 
-	$sql = "INSERT INTO pets (title, ad, type, sex, age, breed, owner, price, photo, note) VALUES ('$adTitle', '$adAd', '" . $_POST["type"] . "', '" . $_POST["sex"] . "', '" . $_POST["age"] . "', '$adBreed', '" . $_POST["owner"] . "', '$adPrice', '" . $photoName . "', '$adNote' )";
-	// INSERT INTO `pets` (`id`, `title`, `ad`, `type`, `sex`, `age`, `breed`, `owner`, `price`, `photo`, `note`, `created`) VALUES (NULL, '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', current_timestamp());
+	//$sql = "INSERT INTO pets (title, ad, type, sex, age, breed, owner, price, photo, note) VALUES ('$adTitle', '$adAd', '" . $_POST["type"] . "', '" . $_POST["sex"] . "', '" . $_POST["age"] . "', '$adBreed', '" . $_POST["owner"] . "', '$adPrice', '" . $photoName . "', '$adNote' )";
+	$sql = "UPDATE users SET avatar = '" . $photoName . "' WHERE id = $userID";
+  // INSERT INTO `pets` (`id`, `title`, `ad`, `type`, `sex`, `age`, `breed`, `owner`, `price`, `photo`, `note`, `created`) VALUES (NULL, '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', current_timestamp());
 
 	if (mysqli_query($conn, $sql)) {
 
@@ -55,7 +57,7 @@ if (isset($_POST['submit'])) {
                   
                   <?php include($_SERVER['DOCUMENT_ROOT'].'/admin/partials/pages/edit-profile-photo.php'); ?>
                     
-                  <form>
+                  <form action="<?php $_SERVER['DOCUMENT_ROOT'].'/admin/partials/pages/edit-profile.php' ?>" method="POST">
 
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Ім'я</label>
@@ -72,77 +74,63 @@ if (isset($_POST['submit'])) {
                     </div>
 
                     <div class="row mb-3">
-                      <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
+                      <label for="region" class="col-md-4 col-lg-3 col-form-label">Область</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="company" type="text" class="form-control" id="company" value="Lueilwitz, Wisoky and Leuschke">
+                        <input name="region" type="text" class="form-control" id="region" value="<?php echo $user['region'] ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
+                      <label for="area" class="col-md-4 col-lg-3 col-form-label">Район</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
+                        <input name="area" type="text" class="form-control" id="area" value="<?php echo $user['area'] ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
+                      <label for="locality" class="col-md-4 col-lg-3 col-form-label">Населений пункт</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="USA">
+                        <input name="locality" type="text" class="form-control" id="locality" value="<?php echo $user['locality'] ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
+                      <label for="phone" class="col-md-4 col-lg-3 col-form-label">Телефон</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
+                        <input name="phone" type="text" class="form-control" id="phone" value="<?php echo $user['phone'] ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                      <label for="email" class="col-md-4 col-lg-3 col-form-label">E-mail</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
+                        <input name="email" type="email" class="form-control" id="email" value="<?php echo $user['email'] ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                      <label for="telegram" class="col-md-4 col-lg-3 col-form-label">Telegram Profile</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="twitter" type="text" class="form-control" id="Twitter" value="https://twitter.com/#">
+                        <input name="tg" type="text" class="form-control" id="telegram" value="<?php echo $user['tg'] ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="facebook" type="text" class="form-control" id="Facebook" value="https://facebook.com/#">
+                        <input name="fb" type="text" class="form-control" id="Facebook" value="<?php echo $user['fb'] ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="instagram" type="text" class="form-control" id="Instagram" value="https://instagram.com/#">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="linkedin" type="text" class="form-control" id="Linkedin" value="https://linkedin.com/#">
+                        <input name="inst" type="text" class="form-control" id="Instagram" value="<?php echo $user['fb'] ?>">
                       </div>
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
+                      <button name="profile-submit" type="submit" class="btn btn-primary">Save Changes</button>
                     </div>
                   </form><!-- End Profile Edit Form -->
 
