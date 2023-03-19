@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 18 2023 г., 17:01
+-- Время создания: Мар 18 2023 г., 22:18
 -- Версия сервера: 10.4.27-MariaDB
 -- Версия PHP: 8.2.0
 
@@ -24,6 +24,46 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `fav`
+--
+
+CREATE TABLE `fav` (
+  `id` int(11) NOT NULL,
+  `user` int(11) NOT NULL,
+  `pet` int(11) NOT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Дамп данных таблицы `fav`
+--
+
+INSERT INTO `fav` (`id`, `user`, `pet`, `created`) VALUES
+(1, 0, 0, '2023-03-18 23:17:51');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `user` int(11) NOT NULL,
+  `pet` int(11) NOT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Дамп данных таблицы `orders`
+--
+
+INSERT INTO `orders` (`id`, `user`, `pet`, `created`) VALUES
+(1, 0, 0, '2023-03-18 23:18:21');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `pets`
 --
 
@@ -33,7 +73,7 @@ CREATE TABLE `pets` (
   `ad` varchar(255) NOT NULL,
   `type` varchar(20) NOT NULL,
   `sex` varchar(10) NOT NULL,
-  `age` varchar(10) NOT NULL,
+  `age` varchar(20) NOT NULL,
   `breed` varchar(20) NOT NULL,
   `owner` int(10) NOT NULL,
   `price` varchar(10) NOT NULL,
@@ -63,7 +103,7 @@ INSERT INTO `pets` (`id`, `title`, `ad`, `type`, `sex`, `age`, `breed`, `owner`,
 (17, 'Кеша ', 'Інокентій (він же Кеша) товариський і дуже любить людей. Кеші виповнилося півроку, він вакцинований, до лотка привчений.', 'cat', 'male', '1-2 years', 'кеша', 8, '400', '7gD8nBVZCx1679055951.jpg', '', '2023-03-17 14:25:51'),
 (18, 'Машка  маленька кішочка', 'Маша трохи полохлива через життя на вулиці. Тим, хто зважиться її дати притулок, потрібно буде почекати, поки кішка освоїться і зрозуміє, що вона в безпеці. І тоді вона покаже своє кохання та відданість новим господарям. На жаль, часу у Маші небагато: нав', 'cat', 'female', '9-12 month', 'white', 8, '400', 'HqgJAsORrW1679056155.jpg', 'white cat', '2023-03-17 14:29:15'),
 (19, 'Red Cat', 'Percy is affectionate and sociable, Carl is cautious. The characters of the cats complement each other, and the fluffies will not bother the owner. Percy is neutered and vaccinated, Carl is preparing to be neutered. They go to the tray without a miss.', 'cat', 'male', '1-2 years', 'red cat', 8, '800', 'YaPuEMCdk51679056307.jpg', '', '2023-03-17 14:31:47'),
-(20, 'віддам в добрі руки', 'Ну у нас знову є виводок, військові знайшли собачку з новонародженими цуценятами і привезли до нас. Малюки трошки підросли і ми починаємо Вас з ними знайомити. Це перша красуня Найкі. Дівчинка виросла поруч з людьми, тому абсолютно соціальна з повною дові', 'dog', 'female', 'less than ', 'doggi', 8, '0', 'DwlHce1aCl1679056505.jpg', '', '2023-03-17 14:35:05'),
+(20, 'віддам в добрі руки', 'Ну у нас знову є виводок, військові знайшли собачку з новонародженими цуценятами і привезли до нас. Малюки трошки підросли і ми починаємо Вас з ними знайомити. Це перша красуня Найкі. Дівчинка виросла поруч з людьми, тому абсолютно соціальна з повною дові', 'dog', 'female', 'less than 3 months', 'doggi', 8, '0', 'DwlHce1aCl1679056505.jpg', '', '2023-03-17 14:35:05'),
 (21, 'чукапабра бойова', 'маленька але не дасть в обіду не себе не вас', 'dog', 'male', '9-12 month', 'dog', 8, '350', 'y1XvDsTsp91679056579.jpg', '0-100', '2023-03-17 14:36:19'),
 (22, 'Марс ', 'Марс виросте шикарним великим котяром. Зараз йому всього 7 місяців, а виглядає він уже як дорослий солідний кіт. Дуже лагідний.', 'cat', 'male', '6-9 months', 'cat', 8, '300', '2G6F8aoA7I1679056717.jpg', '', '2023-03-17 14:38:37'),
 (23, 'пухнастик собака', 'гарний добрий і жре не багато, на цепок не посадиш, але донькам буде чим бавитися', 'dog', 'female', '3-6 months', 'хохлата', 8, '4600', 'HnEmLWDi9u1679057014.jpg', 'торг', '2023-03-17 14:43:34'),
@@ -106,12 +146,24 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `phone`, `re
 (1, 'Admin', 'admin@i.ua', '$2y$10$xh202snU0Rc/KFrDnodBVOSP4UtfS9RgYP9VmLvcjAyhQgz4g4cE.', 'admin', '+380', '', '', '', 'admin.jpg', '', '', '', '', '2023-03-11 18:12:05'),
 (2, 'ZooSweat', 'user1@i.ua', '$2y$10$0xFcFDLE.TvrMJfqwKdvHeJD4bWPWGN9.t.GxRPFeAOqCZrRE6Sxa', 'user', '+380', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-11 18:12:05'),
 (3, 'nursery \"friend\"', 'user2@i.ua', '$2y$10$1OYhCsuASSJicDsxyWeMy.XliCL.khpQBGY5lFJaLMPfcpVPS1Bw2', 'user', '', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-11 20:05:25'),
-(4, 'Админ', 'adm@i.ua', '$2y$10$nJ8oWxzMC4j9KJhyoXokaunkWjw0nwNootavGpvdTC6wXJNozqsvi', 'admin', '+', '', '', '', '1', '', '', '', '', '2023-03-14 12:53:45'),
+(4, 'Админ', 'adm@i.ua', '$2y$10$nJ8oWxzMC4j9KJhyoXokaunkWjw0nwNootavGpvdTC6wXJNozqsvi', 'admin', '1', '1', '1', '1', 'noimg.jpg', '1', '1', '1', '515', '2023-03-14 12:53:45'),
 (8, 'kosss', 'kosss@i.ua', '$2y$10$.xXRIqFXwnIg4NuWREYoPey/AAh6kizQTjOwkuhkWCUWut/Ok0FnS', 'user', '', '', '', '', 'noimg.jpg', '', '', '', '', '2023-03-17 14:17:50');
 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `fav`
+--
+ALTER TABLE `fav`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `pets`
@@ -128,6 +180,18 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `fav`
+--
+ALTER TABLE `fav`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `pets`
