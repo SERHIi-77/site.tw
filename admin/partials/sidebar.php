@@ -13,7 +13,7 @@
   <li class="nav-heading">сторінки</li>
 
   <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#profile-nav" data-bs-toggle="collapse" href="#">
+      <a class="nav-link collapsed" data-bs-target="#profile-nav" data-bs-toggle="collapse" href="?p=view-profile">
           <i class="bi bi-person"></i>
           <span>Профіль</span><i class="bi bi-chevron-down ms-auto"></i>
       </a>

@@ -42,7 +42,7 @@ if(!empty($_FILES) && $_FILES['avatar']['error'] != 4) {
     <div class="row mb-3">
         <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Зображення профілю</label>
         <div class="col-md-8 col-lg-9">
-        <img src="/uploads/avatars/<?php echo $user['avatar'] ?>" alt="Profile">
+        <img src="/uploads/avatars/<?php echo $user['avatar']; ?>" alt="Profile">
         <div class="pt-2">
         <i class="ti-image btn-icon-prepend"></i>   
             <input id="avatarProfile" type="file" name="avatar" class="file-upload-default-sm"></input>    

@@ -17,8 +17,9 @@ if (isset($_POST['profile-submit'])) {
   //UPDATE `users` SET `phone` = '1', `region` = '1', `area` = '1', `locality` = '1', `avatar` = '2', `tg` = '1', `fb` = '1', `inst` = '1', `about` = '1' WHERE `users`.`id` = 4;
 
 	if (mysqli_query($conn, $sql)) {
-    //header("Location: " . $_SERVER['DOCUMENT_ROOT'].'/admin/index.php');
+    //header("Location: " . $_SERVER['DOCUMENT_ROOT'].'/admin/index.php?p=view-profile');
     //header('Location: ' . $_SERVER['PHP_SELF']);
+    echo('<script> window.location.href = "/admin/index.php?p=view-profile"; </script>');
 	} else {
 		echo "Error:" . $sql . "<br>" . mysqli_error($conn);
 	}
