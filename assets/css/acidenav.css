@@ -7,8 +7,10 @@
     flex-shrink: 0;
     padding-bottom: 1000px;
     margin-left: 0px;
-
    }
+   legend {
+    font-size: 1rem;
+}
    .filters{
    position: fixed;
    top: 100px;
@@ -25,16 +27,16 @@
     flex-direction: column;
    }
    .input-custom{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border: 3px solid #3e77aa; ;
     margin-right: 10px;  
 }
 
    .input-checkbox, .input-checkbox-second, .input-checkbox-cat{
-    font-size: 18px;
+    font-size: 14px;
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .input-checkbox input, .input-checkbox-second input, .input-checkbox-cat input{
     display: none;
