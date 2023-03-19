@@ -1,0 +1,7 @@
+.article-container {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 150px 20px;
+    background: #f8f7f6 url(/assets/img/news/beckground.jpg);    
+   
+}
