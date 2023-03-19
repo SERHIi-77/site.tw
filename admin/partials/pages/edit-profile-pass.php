@@ -8,14 +8,14 @@ if (isset($_POST['submit'])) {
     echo($_POST['newpassword']);
     echo($hasPas);
 
-  //$sql = "UPDATE users SET password = '" . $hasPas . "' WHERE id = $userID;";
+  $sql = "UPDATE users SET password = '" . $hasPas . "' WHERE id = $userID;";
 
-//   if (mysqli_query($conn, $sql)) {
+  if (mysqli_query($conn, $sql)) {
 
-//     echo('<script> window.location.href = "/admin/index.php?p=view-profile"; </script>');
-//   } else {
-//     echo "Error:" . $sql . "<br>" . mysqli_error($conn);
-//   }
+    echo('<script> window.location.href = "/admin/index.php?p=view-profile"; </script>');
+  } else {
+    echo "Error:" . $sql . "<br>" . mysqli_error($conn);
+  }
 }
 
 ?>
