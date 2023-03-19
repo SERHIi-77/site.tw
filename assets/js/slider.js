@@ -66,9 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
       window.location.href = "/?p=catalog&search=" + query;
     });
   }
-});
 
-document.addEventListener("DOMContentLoaded", function() {
   const searchParams = new URLSearchParams(window.location.search);
   const searchTerm = searchParams.get("search");
   if (searchTerm && document.querySelector(".product-card")) {
@@ -80,6 +78,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+
+
+
 
 
 

@@ -1,0 +1,50 @@
+.aside-menu-catalog{
+    flex-shrink: 0;
+    width: 280px;
+    height: 600px;
+    width: 280px;
+    height: 600px;
+    flex-shrink: 0;
+    padding-bottom: 1000px;
+    margin-left: 0px;
+
+   }
+   .filters{
+   position: fixed;
+   top: 100px;
+   left: 0;
+    width: 280px;
+    height: 600px;
+    background-color:#a3afba;
+    padding-bottom: 1000px;
+    margin-left: 0px;
+    padding-left: 20px;
+   }
+   .filter-type-pet{
+    display: flex;
+    flex-direction: column;
+   }
+
+
+
+
+   .input-custom{
+    width: 30px;
+    height: 30px;
+    border: 3px solid #3e77aa; ;
+    margin-right: 10px;  
+}
+   .input-checkbox{
+    font-size: 18px;
+    display: flex;
+    margin-bottom: 10px;
+}
+.input-checkbox input{
+    display: none;
+}
+
+.input-checkbox input:checked + div{
+    background: url(../img/home/checkbox_busy.svg);
+    background-size: contain;
+  background-repeat: no-repeat;
+} 

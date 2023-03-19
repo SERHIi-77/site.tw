@@ -2,57 +2,52 @@
     <div class="led-tronylsya">
         <div class="aside-menu-catalog">
 
+            <div class="filters">
+                <h4>Кого шукаєш?</h4>
+                <form>
+                    <fieldset>
+                    <legend>Обери:</legend>
+                    <div class="filter-type-pet">
+                        <label class="input-checkbox"><input type="checkbox" name="type-pet" value="cat"><div class="input-custom"></div>Муркотики</label>
+                        <label class="input-checkbox"><input type="checkbox" name="type-pet" value="dog"><div class="input-custom"></div> Песики</label>
+                        <!-- <label ><input type="checkbox"  name="Terms" checked> -->
+                
+                    </div>
+                    </fieldset>
+                    <fieldset>
+                    <legend>Пол:</legend>
+                    <div class="filter-sex-type-pet">
+                        <label class="input-checkbox"><input type="checkbox" name="sex-type-pet" value="male"><div class="input-custom"></div> Хлопчики</label>
+                        <label class="input-checkbox"><input type="checkbox" name="sex-type-pet" value="female"><div class="input-custom"></div> дівчатка</label>
+                    </div>
+                    </fieldset>
+                    <fieldset>
+                    <legend>Возраст:</legend>
+                    <div class="filter-age-of-pet">
+                        <label><input type="checkbox" name="age-of-pet" value="less than">до 3 місяців</label>
+                        <label><input type="checkbox" name="age-of-pet" value="3-6 months">3-6 місяців</label>
+                        <label><input type="checkbox" name="age-of-pet" value="6-9 months">6-9 місяців</label>
+                        <label><input type="checkbox" name="age-of-pet" value="9-12 months">9-12 місяців</label>
+                        <label><input type="checkbox" name="age-of-pet" value="1-2 years"> 1-2 рочки</label>
+                        <label><input type="checkbox" name="age-of-pet" value="2"> 3 роки</label>
+                        <label><input type="checkbox" name="age-of-pet" value="3"> 4 роки</label>
+                        <label><input type="checkbox" name="age-of-pet" value="over 5 yea"> старше 5 років</label>
+                    </div>
+                    </fieldset>
+                    <fieldset>
+                    <legend>Вартість:</legend>
+                    <div class="filter-price-pet">
+                        <input type="range" name="price-min" value="0" min="0" max="7000">
+                        <input type="range" name="price-max" value="7000" min="0" max="7000">
+                    </div>
+                    </fieldset>
+                    
+                    <button id="reset-btn">Reset Filters</button>
+                </form>
+                </div>
+            </div>
 
-
-        <div class="filters">
-  <h3>Фильтры:</h3>
-  <form>
-    <fieldset>
-      <legend>Вид животного:</legend>
-      <div class="filter-type-pet">
-        <label><input type="checkbox" name="type-pet" value="cat"> Кошки</label>
-        <label><input type="checkbox" name="type-pet" value="dog"> Собаки</label>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Пол:</legend>
-      <div class="filter-sex-type-pet">
-        <label><input type="checkbox" name="sex-type-pet" value="male"> Мужские</label>
-        <label><input type="checkbox" name="sex-type-pet" value="female"> Женские</label>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Возраст:</legend>
-      <div class="filter-age-of-pet">
-        <label><input type="checkbox" name="age-of-pet" value="3-6 months"> 3-6 месяцев</label>
-        <label><input type="checkbox" name="age-of-pet" value="2"> 2 года</label>
-        <label><input type="checkbox" name="age-of-pet" value="3"> 3 года</label>
-        <label><input type="checkbox" name="age-of-pet" value="4"> 4 года</label>
-        <label><input type="checkbox" name="age-of-pet" value="over 5"> старше 5 лет</label>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Цена:</legend>
-      <div class="filter-price-pet">
-        <input type="range" name="price-min" value="0" min="0" max="1000">
-        <input type="range" name="price-max" value="1000" min="0" max="1000">
-      </div>
-    </fieldset>
-    <button type="submit">Применить</button>
-    
-  </form>
-</div>
-
-
-
-
-
-
-
-
-        </div>
         <div class="catalog-post-general">
-
 <?php
 $sql = "SELECT * FROM pets ORDER BY created DESC";
 $result = $conn->query($sql);
@@ -71,9 +66,13 @@ if($result = $conn->query($sql)):
                     <p class="sex-type-pet"><?php echo ($row['sex']);?></p>
                     <p class="age-of-pet"><?php echo ($row['age']);?></p>
                 </div>
-                <h4 class="price-pet"><?php echo ($row['price']);?></h4>
-                <div class="breed-note"><p><?php echo ($row['breed']);?></p><p><?php echo ($row['note']);?></p></div>
-                <p><?php echo ($row['created']);?></p>
+                <strong><h4 class="price-pet"><?php echo ($row['price']);?></h4></strong>
+                <!-- <div class="breed-note"><p><?php echo ($row['breed']);?></p><p><?php echo ($row['note']);?></p></div> -->
+                <div class="card-product-down">
+                    <span class="like-hearts"></span>
+                    <i><p><?php echo ($row['created']);?></p></i>
+                    
+                </div>
             </div>
 <!-- <?php
     endforeach;

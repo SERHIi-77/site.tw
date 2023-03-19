@@ -1,30 +1,60 @@
-// Обработчик события отправки формы
-$('form').on('submit', function(event) {
-    event.preventDefault();
-  
-    // Собираем выбранные значения фильтров
-    var selectedTypePet = $('input[name="type-pet"]:checked').map(function() { return this.value; }).get();
-    var selectedSexTypePet = $('input[name="sex-type-pet"]:checked').map(function() { return this.value; }).get();
-    var selectedAgeOfPet = $('input[name="age-of-pet"]:checked').map(function() { return this.value; }).get();
-    var minPrice = $('input[name="price-min"]').val();
-    var maxPrice = $('input[name="price-max"]').val();
-  
-    // Показываем только те карточки товаров, которые соответствуют выбранным фильтрам
-    $('.product-card').each(function() {
-      var $card = $(this);
-  
-      if (
-        (selectedTypePet.length === 0 || selectedTypePet.includes($card.find('.type-pet').text())) &&
-        (selectedSexTypePet.length === 0 || selectedSexTypePet.includes($card.find('.sex-type-pet').text())) &&
-        (selectedAgeOfPet.length === 0 || selectedAgeOfPet.includes($card.find('.age-of-pet').text())) &&
-        ($card.find('.price-pet').text() >= minPrice && $card.find('.price-pet').text() <= maxPrice)
-      ) {
-        $card.show();
-      } else {
-        $card.hide();
-      }
-    });
-  });
 
+
+
+$(document).ready(function() {
+    // Функция, которая фильтрует карточки в соответствии с выбранными параметрами
+    function filterCard() {
+      // Собираем значения чекбоксов
+      var type = $('.filter-type-pet input:checked').map(function() { return this.value; }).get();
+      var sex = $('.filter-sex-type-pet input:checked').map(function() { return this.value; }).get();
+      var age = $('.filter-age-of-pet input:checked').map(function() { return this.value; }).get();
+      // Собираем значения диапазона цен
+      var minPrice = parseInt($('input[name="price-min"]').val());
+      var maxPrice = parseInt($('input[name="price-max"]').val());
   
+      // Фильтруем карточки
+      $('.product-card').each(function() {
+        var $card = $(this);
+        // Проверяем тип животного
+        if (type.length && type.indexOf($card.find('.type-pet').text()) === -1) {
+          $card.hide();
+          return;
+        }
+        // Проверяем пол животного
+        if (sex.length && sex.indexOf($card.find('.sex-type-pet').text()) === -1) {
+          $card.hide();
+          return;
+        }
+        // Проверяем возраст животного
+        if (age.length && !age.includes($card.find('.age-of-pet').text())) {
+            $card.hide();
+            return;
+          }
+        // Проверяем цену животного
+        var price = parseInt($card.find('.price-pet').text());
+        if (price < minPrice || price > maxPrice) {
+          $card.hide();
+          return;
+        }
+        // Если все параметры совпадают, то показываем карточку
+        $card.show();
+      });
+    }
+  
+    // При изменении любого параметра фильтра запускаем функцию filterCards
+    $('.filters input, .filters select').change(filterCard);
+  
+    // Обработчик клика на кнопке "Сбросить фильтры"
+    $('#reset-btn').click(function(event) {
+      event.preventDefault();
+      // Сбрасываем все значения фильтров и перезапускаем функцию filterCards
+      $('.filters input').prop('checked', false);
+      $('input[name="price-min"]').val(0);
+      $('input[name="price-max"]').val(7000);
+      filterCard();
+    });
+  
+    // Запускаем функцию filterCards, чтобы отфильтровать карточки при загрузке страницы
+    filterCard();
+  });
   

@@ -233,17 +233,12 @@ position: relative;
     align-items: center;
     justify-content: space-around;
 }
-.aside-menu-catalog{
-flex-shrink: 0;
- width: 180px;
- height: 400px;
- background-color: aqua;
-}
+
 .catalog-post-general{
     max-width: 1280px;
     display: flex;
     flex-wrap: wrap;
-gap: 10px;
+gap: 20px;
 align-items: flex-start;
 justify-content: space-evenly;
     flex-shrink: 1;
@@ -303,7 +298,22 @@ justify-content: space-evenly;
     justify-content: space-between;
     border: 0.5px solid #221f1f;
 }
+.card-product-down{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+.card-product-down p{
+    margin: 0;
+}
+.like-hearts{
+    height: 20px;
+    width: 20px;
+    background-color: red;
 
+}
 /* КНОПКИ СЛАЙДЕРА */
 .slick-prev:before {
     font-size: 40px; /* Установить желаемый размер */

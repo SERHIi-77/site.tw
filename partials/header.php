@@ -23,7 +23,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 
   <meta name="theme-color" content="#fafafa">
-  
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <link rel="stylesheet" type="text/css" href="assets/contact/contact.css"/>
   <link rel="stylesheet" type="text/css" href="assets/news/news.css"/>
   <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
@@ -33,7 +33,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css"> 
+  <link rel="stylesheet" href="assets/css/acidenav.css">
 </head>
 
 <body>
