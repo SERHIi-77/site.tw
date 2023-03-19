@@ -11,6 +11,7 @@
                 <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'catalog'): ?> active<?php endif ?>" href="/?p=catalog">Каталог</a></li>
                 <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'about'): ?> active<?php endif ?>" href="/?p=about">Новини</a></li>
                 <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'contact'): ?> active<?php endif ?>" href="/?p=contact">Допомога</a></li>
+                    <li class="nav-item" ><a class="nav-link<?php if(isset($_GET['p']) && $_GET['p'] == 'rules'): ?> active<?php endif ?>" href="/?p=rules">Конфідеційність</a></li>
                 
                 <?php // добавляем менюшку если залогирован пользователь
                     if(isAuth ()):

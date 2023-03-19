@@ -26,6 +26,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <link rel="stylesheet" type="text/css" href="assets/contact/contact.css"/>
   <link rel="stylesheet" type="text/css" href="assets/news/news.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/rules/rules.css"/>
   <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
