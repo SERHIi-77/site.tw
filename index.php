@@ -22,9 +22,6 @@ if (isset($_GET['p'])) {
 		case 'contact':
 			$page = 'contact';
 			break;
-		case 'rules':
-			$page = 'rules';
-			break;
 		default:
 			$page = 'home';
 			break;

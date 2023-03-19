@@ -1,4 +1,7 @@
-<div class="article-container" id="article-container">
+<div class="article-container" id="article-container" style="
+    margin: 0 auto;
+    max-width: 1480px;
+    background: #f8f7f6 url(/assets/img/news/beckground.jpg);>
     <aside class="article-sidebar" aria-labelledby="section-articles-title">     
     </aside>
 
