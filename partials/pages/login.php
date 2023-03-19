@@ -7,7 +7,7 @@ if(isset($_POST['submit'])):
   $sql = "SELECT * FROM users WHERE email = '$email'";
   $result = $conn->query($sql);
   $user = $result->fetch_assoc();
-  var_dump($user['password']);
+  //var_dump($user['password']);
   if (password_verify($password, $user['password'])) {
       //succes password_verify($password, $user['password'])
       echo('You autorisation');
@@ -24,6 +24,7 @@ if(isset($_POST['submit'])):
       $_SESSION["user_id"] = null;
       setcookie('user_id', '', 0, '/' );
       echo ('password failed');
+      echo('<script> $(#loginUserPic).css({ "animation" : "0.6s ease 0s 1 normal none running swing"}); $(#loginUserPic).removeAttr( "style" ); </script>');
       // header("Location: #");
   }
 
@@ -36,7 +37,7 @@ endif;
       <div class="col-md-4">
         
         <div class="logo">
-          <img src="/assets/images/user.png">
+          <img id="loginUserPic" src="/assets/images/user.png">
         </div>
 
         <div class="form-group">
