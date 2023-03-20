@@ -9,7 +9,7 @@ if (!empty($_POST)) {
   if (mysqli_query($conn, $sql)) {
     //echo "Stored." . "<br>";
     mysqli_close($conn);
-    header("Location: /");
+    header("Location: /partials/pages/login.php");
   } else {
     echo "Error:" . $sql . "<br>" . mysqli_error($conn);
   }
@@ -17,40 +17,50 @@ if (!empty($_POST)) {
 mysqli_close($conn);
 ?>
 
-  <form method="POST">
-    <div class="container">
+<form action="<?php $_SERVER['DOCUMENT_ROOT'].'/partials/pages/register.php' ?>" method="POST">
+  <div class="card">
+    <div class="card-body">
       <div class="row justify-content-center">
         <div class="col-md-4">
 
-              <div class="logo">
-                <img src="/assets/images/user.png">
-              </div>
+          <div class="logo row justify-content-center">
+            <img id="loginUserPic" src="/assets/images/user.png" style="width: 150px; height: auto;">
+          </div>
 
-              <div class="form-group">
-                <input type="username" name="name" class="form-control _ge_de_ol" type="text" placeholder="Enter Name"
-                  required="" aria-required="true">
-              </div>
+          <div class="form-group">
+            <div class="mb-3">
+              <label for="regName" class="form-label">Введіть ім'я</label>
+              <input type="username" name="name" id="regName" class="form-control _ge_de_ol" type="text" placeholder="Enter Name" required="true">
+            </div>
+          </div>
 
-              <div class="form-group">
-                <input type="email" name="email" class="form-control _ge_de_ol" type="text" placeholder="Enter Email"
-                  required="" aria-required="true">
-              </div>
+          <div class="form-group">
+            <div class="mb-3">
+              <label for="regEmile" class="form-label">Адреса електронної пошти</label>
+              <input type="email" name="email" id="regEmile" class="form-control _ge_de_ol" type="text" placeholder="Enter Email" required="true">
+            </div>
+          </div>
 
-              <div class="form-group">
-                <input type="password" name="password" class="form-control _ge_de_ol" type="text"
-                  placeholder="Enter Password" required="" aria-required="true">
-              </div>
+          <div class="form-group">
+            <div class="mb-3">
+              <label for="regPassword" class="form-label">Пароль</label>
+              <input type="password" name="password" id="regPassword" class="form-control _ge_de_ol" type="text" placeholder="Enter Password" required="true">
+            </div>
+          </div>
 
-              <div class="form-group">
-                <div class="_btn_04">
-                  <button type="submit" name="submit">Sign up</button>
-                </div>
+          <div class="form-group">
+            <div class="_btn_04">
+              <div class="text-center">
+                <button type="submit" name="submit" class="btn btn-primary">Sign up</button>
               </div>
-
+            </div>
+          </div>
+        
         </div>
       </div>
     </div>
-  </form>
+  </div>
+</form>
 
 
 <?php
