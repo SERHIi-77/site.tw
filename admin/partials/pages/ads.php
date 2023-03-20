@@ -1,9 +1,14 @@
 <?php
-
 $ads = getAllAdsByUser(getUserID());
+
+
 ?>
 
-<?php while($row = $ads->fetch_assoc()): ?>
+<?php while($row = $ads->fetch_assoc()): 
+        $fav_query = 'SELECT COUNT(*) as count FROM fav WHERE pet = '.$row['id'];
+        $favcount = mysqli_fetch_assoc(mysqli_query($conn, $fav_query))['count'];
+    
+?>
 <!-- Card with an image on left -->
 <div class="card">
     <div class="card-header d-flex justify-content-between">
@@ -54,7 +59,7 @@ $ads = getAllAdsByUser(getUserID());
     </div>
     <div class="card-footer d-flex justify-content-between">
         <div>
-            <p>Оголошення відзначено <strong><?php echo($row['created']);?></strong> разів</p>
+            <p>Оголошення відзначено <strong><?php echo($favcount);?></strong> разів</p>
         </div>
         <div>
             <button class="btn btn-success rounded-pill"><i class="bi bi-pencil-square"></i> Редагування</button>

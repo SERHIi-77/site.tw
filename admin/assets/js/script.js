@@ -6,7 +6,7 @@ const btn= $('#btnChPass');
 form.on('submit', (event) => {
   if (passwordInput.val() !== confirmPasswordInput.val()) {
     event.preventDefault();
-    $('#smallModalOnPass').modal('show')
+    $('#smallModalOnPass').modal('show');
     //alert('Паролі не співпадають');
   }
 });
