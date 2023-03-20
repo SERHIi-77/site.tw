@@ -23,8 +23,8 @@ if(!empty($_FILES) && $_FILES['avatar']['error'] != 4) {
         case isset($_POST['photo_submit']):
             $sql = "UPDATE users SET avatar = '" . $photoName . "' WHERE id = $userID";
             mysqli_query($conn, $sql); 
-            $txtModal ='Аватар додано';
-            echo("<script> $('#smallModalOnAvatar').modal('show'); </script>");
+            //$txtModal ='Аватар додано';
+            //echo("<script> showModalWindow(); </script>");
             echo('<script> window.location.href = "/admin/index.php?p=edit-profile"; </script>');
             break;
         case isset($_POST['delete_submit']):
@@ -32,7 +32,7 @@ if(!empty($_FILES) && $_FILES['avatar']['error'] != 4) {
             if (file_exists($filePath) && $user['avatar']!='noimg.jpg') {
                 if (unlink($filePath)) {
                     $txtModal ='Аватар видалено';
-                    echo("<script> $('#smallModalOnAvatar').modal('show'); </script>");
+                    echo("document.getElementById('smallModalOnAvatar').classList.add('show');");
                     } else {
                     $txtModal ='Помилка видалення аватару';
                     echo("<script> $('#smallModalOnAvatar').modal('show'); </script>");

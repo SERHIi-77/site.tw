@@ -11,6 +11,11 @@ form.on('submit', (event) => {
   }
 });
 
+function showModalWindow (params='#smallModalOnAvatar') {
+  //$('#smallModalOnAvatar').modal('show');
+  $(params).modal('show');
+}
+
 // button.on('mouseover', () => {
 // form.on('submit', (event) => {
 
