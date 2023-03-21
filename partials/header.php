@@ -15,6 +15,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
 <head>
   <meta charset="utf-8">
   <title>Site T1-TW3</title>
+  <meta name="theme-color" content="#221f1f">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,6 +37,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css"> 
   <link rel="stylesheet" href="assets/css/acidenav.css">
+  <link rel="stylesheet" href="assets/css/productcard.css">
+  <link rel="shortcut icon" type="image/png" href="assets/img/home/black-cat.svg">
 </head>
 
 <body>

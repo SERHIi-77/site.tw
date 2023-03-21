@@ -58,3 +58,26 @@ $(document).ready(function() {
     filterCard();
   });
   
+
+
+
+  $(document).ready(function() {
+      $(".i-want-by-buy").on("click", function() {
+          var petId = $(this).data("pet");
+          $.ajax({
+              url: "../actions/buy.php",
+              method: "POST",
+              data: { petId: petId },
+              success: function(response) {
+                  if (response == "not_logged_in") {
+                      window.location.href = "../partials/pages/login.php";
+                  } else if (response == "success") {
+                      // Handle success
+                  } else {
+                      // Handle other errors
+                  }
+              }
+          });
+      });
+  });
+ 

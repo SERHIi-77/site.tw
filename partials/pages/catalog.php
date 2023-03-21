@@ -1,3 +1,5 @@
+
+
 <div class="main-container">
     <div class="led-tronylsya">
         <div class="aside-menu-catalog">
@@ -22,7 +24,7 @@
                     </div>
                     </fieldset>
                     <fieldset>
-                    <legend>ВІЛ:</legend>
+                    <legend>ВІК:</legend>
                     <div class="filter-age-of-pet">
                         <label class="input-checkbox-second"><input type="checkbox" name="age-of-pet" value="less than"><div class="input-custom"></div>до 3 місяців</label>
                         <label class="input-checkbox-second"><input type="checkbox" name="age-of-pet" value="3-6 months"><div class="input-custom"></div>3-6 місяців</label>
@@ -68,9 +70,12 @@ if($result = $conn->query($sql)):
                     <p class="age-of-pet"><?php echo ($row['age']);?></p>
                 </div>
                 <strong><h4 class="price-pet"><?php echo ($row['price']);?></h4></strong>
-                <!-- <div class="breed-note"><p><?php echo ($row['breed']);?></p><p><?php echo ($row['note']);?></p></div> -->
+                
                 <div class="card-product-down">
-                    <span class="like-hearts"></span>
+
+                    <span class="like-hearts favorite" data-pet="<?php echo $row['id']; ?>">" ></span>
+                    <button class="i-want-by-buy" data-pet="<?php echo $row['id']; ?>">buy</button >
+
                     <i><p><?php echo ($row['created']);?></p></i>
                     
                 </div>
@@ -83,3 +88,4 @@ endif;
         </div>
     </div>
 </div>
+
