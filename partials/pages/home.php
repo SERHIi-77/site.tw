@@ -1,3 +1,10 @@
+            <div id="modal"> 
+                <div id="ModalContent">
+                    <h3>дякую, чекайте на дзвінок продавця</h3>
+                    <button>OK</button>
+                </div>
+            </div>
+
 
 <div class="main-container">
     <div class="led-tronylsya">
@@ -34,71 +41,61 @@
     </div>
 </div>
 
-<section class="free-friend">
-    <div class="content-free-friend">
 
-        <h3>Друзі не продаються</h3>
-        <div class="for-ff-card">
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-        </div>
-        </div>
-   
-</section>
-<section class="dog-friend">
-    <div class="content-dog-friend">
-        <h3>Друзі песики</h3>
-        <div class="for-dog-card">
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-        </div>
-    </div>
-</section>
-<section class="cat-friend">
-    <div class="content-cat-friend">
-        <h3>Друзі котейкі</h3>
-        <div class="for-cat-card">
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-        </div>
-    </div>
-</section>
-<!-- <section class="cat-friend">
-    <div class="content-cat-friend">
-        <h3></h3>
-        <div class="for-cat-card">
-            <div class="test">1</div>
-            <div class="test">2</div>
-            <div class="test">3</div>
-        </div>
-    </div>
-</section> -->
-<section class="news-friend">
-    <div class="content-news-friend">
-        <h3>Горячие новинки</h3>
-        <div class="for-news-card">
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-        </div>
-    </div>
-</section>
-<section class="news-blog-content">
-    <div class="content-news-blog-content">
-        <h3>Новини пушистого світу</h3>
-        <div class="for-news-blog-card">
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-            <div class="test">php code</div>
-        </div>
-    </div>
-</section>
+<div class="main-home">
+    <section class="free-friend">
+        <div class="content-free-friend">
 
+            <h3>Друзі не продаються</h3>
+            <div class="for-ff-card">
+                
+            <?php
+                require($_SERVER['DOCUMENT_ROOT'].'/partials/parts/freefrendcards.php');
+            ?>
+
+            </div>
+        </div>
+    
+    </section>
+    <section class="dog-friend">
+        <div class="content-dog-friend">
+            <h3>Друзі песики</h3>
+            <div class="for-dog-card">
+                    <?php
+                        require($_SERVER['DOCUMENT_ROOT'].'/partials/parts/dogfriendcards.php');
+                    ?>
+            </div>
+        </div>
+    </section>
+    <section class="cat-friend">
+        <div class="content-cat-friend">
+            <h3>Друзі котейкі</h3>
+            <div class="for-cat-card">
+                <?php
+                            require($_SERVER['DOCUMENT_ROOT'].'/partials/parts/catfriendcard.php');
+                        ?>
+                </div>
+        </div>
+    </section>
+
+    <section class="news-friend">
+        <div class="content-news-friend">
+            <h3>Щукаємо друзів</h3>
+            <div class="for-news-card">
+                    <?php
+                        require($_SERVER['DOCUMENT_ROOT'].'/partials/parts/newsfriendcard.php');
+                    ?>
+            </div>   
+        </div>
+    </section>
+    <section class="news-blog-content">
+        <div class="content-news-blog-content">
+            <h3>Новини пушистого світу</h3>
+            <div class="for-news-blog-card">
+                    <?php
+                        require($_SERVER['DOCUMENT_ROOT'].'/partials/parts/newsstory.php');
+                    ?>
+            </div>
+        </div>
+    </section>
+</div>

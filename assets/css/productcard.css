@@ -44,7 +44,8 @@
     width: 100%;
     height: 180px;
     overflow: hidden;
-   
+   text-align: center;
+   padding: 5px;
 }
 .one-str-type-card, .breed-note{
     width: 100%;
@@ -102,6 +103,10 @@ background-size: contain;
     cursor: pointer;
   background-image: linear-gradient(to bottom, #22A0E9, #3e77aa);
 }
+.i-want-by-buy:hover{
+    background-image: linear-gradient(to bottom, #4b4b4b, #2a2929);
+  }
+
 .price-pet{
     color: #3e77aa;
     padding-left: 20px;

@@ -1,4 +1,9 @@
-
+            <div id="modal"> 
+                <div id="ModalContent">
+                    <h3>дякую, чекайте на дзвінок продавця</h3>
+                    <button>OK</button>
+                </div>
+            </div>
 
 <div class="main-container">
     <div class="led-tronylsya">
