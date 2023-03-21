@@ -40,6 +40,13 @@ function getUserID() {
     }
 }
 
+function getAllbyUser ($adID) {
+    global $conn;
+        $sql = "SELECT * FROM users WHERE id=" . $adID;
+        $result = mysqli_query($conn, $sql);
+        return $user = $result->fetch_assoc();
+}
+
 function getCurrentAd ($adID) {
     global $conn;
         $sql = "SELECT * FROM pets WHERE id=" . $adID;
