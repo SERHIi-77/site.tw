@@ -27,6 +27,9 @@ if (isset($_GET['p'])) {
 		case 'ads':
 			$page = '/admin/partials/pages/ads';
 			break;
+		case 'ads-add':
+			$page = '/admin/partials/pages/ads-add';
+			break;
 		case 'favorites':
 			$page = '/admin/partials/pages/favorites';
 			break;

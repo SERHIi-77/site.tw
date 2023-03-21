@@ -30,6 +30,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
   <link rel="stylesheet" type="text/css" href="assets/rules/rules.css"/>
   <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">

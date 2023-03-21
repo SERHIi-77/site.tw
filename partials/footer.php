@@ -1,11 +1,49 @@
 
-<footer class="bg-light text-center text-lg-start" id="color-footer">
+<footer  class="text-center text-lg-start text-white"
+          style="background-color: #45526e">
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © <script>document.write(new Date().getFullYear());</script> Copyright:
-    <a class="text-dark" href="#">IT-Banda</a>
-    
-  </div>
+  <section class="p-3 pt-0">
+    <div class="row d-flex align-items-center">
+      <!-- Grid column -->
+      <div class="col-md-7 col-lg-8 text-center text-md-start">
+        <!-- Copyright -->
+        <div class="p-3">
+          © 2023 Copyright:
+          <a class="text-white" href="https://freelancer.itbanda.pro/">IT Banda</a>
+          <a href="https://www.facebook.com/itbanda.pro/"
+                class="btn btn-outline-light btn-floating m-1"
+                class="text-white"
+                role="button"
+                ><i class="fa fa-facebook"></i
+              ></a>
+
+            <!-- Google -->
+            <a href="https://t.me/it_banda_ua"
+                class="btn btn-outline-light btn-floating m-1"
+                class="text-white"
+                role="button"
+                ><i class="fa fa-telegram"></i
+              ></a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/itbanda.pro/"
+                class="btn btn-outline-light btn-floating m-1"
+                class="text-white"
+                role="button"
+                ><i class="fa fa-instagram"></i
+              ></a>
+        </div>
+        <!-- Copyright -->
+      </div>
+          <!-- Grid column -->
+          
+          
+        </div>
+    </section>
+    <!-- Section: Copyright -->
+</footer>
+
+
   
   <!-- Copyright -->
 </footer>
