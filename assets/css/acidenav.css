@@ -78,7 +78,9 @@
     cursor: pointer;
     background-color: #484848;
   background-image: linear-gradient(to bottom, #4b4b4b, #2a2929);
-  
+  }
+  #reset-btn:hover{
+    background-image: linear-gradient(to bottom, #22A0E9, #3e77aa);
   }
 
   .filter-price-pet{
@@ -149,6 +151,8 @@ line-height: 28px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  background-color: #484848;
 background-image: linear-gradient(to bottom, #22A0E9, #3e77aa);
+}
+#ModalContent button:hover{
+  background-image: linear-gradient(to bottom, #c87a04, #ea8d02);
 }
