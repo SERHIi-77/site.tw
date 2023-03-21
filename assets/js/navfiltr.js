@@ -59,7 +59,7 @@ $(document).ready(function() {
   });
   
 
-
+// ниже кнопка купить
 
   $(document).ready(function() {
       $(".i-want-by-buy").on("click", function() {
@@ -81,3 +81,31 @@ $(document).ready(function() {
       });
   });
  
+
+  // модальное окно
+
+//   $('#send1').on('click', function(){
+//     $('#modal').css('display','block');
+// });
+
+// $('#ModalContent button').on('click', function(){
+//     $('#modal').css('display','none');
+// });
+
+$(document).ready(function() {
+  // при клике на кнопку
+  $('.i-want-by-buy').click(function(e) {
+    e.preventDefault(); // отменяем действие по умолчанию (если это ссылка)
+
+    // задержка в 1 секунду перед отображением модального окна
+    setTimeout(function(){
+        $('#modal').show();
+    }, 1000);
+  });
+
+  // при клике на кнопку внутри модального окна
+  $('#ModalContent button').click(function() {
+    // скрываем модальное окно
+    $('#modal').hide();
+  });
+});

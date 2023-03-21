@@ -1,9 +1,9 @@
-<?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    echo "not_logged_in";
-    exit();
-}
+<?php session_start();
+ if (!isset($_SESSION['user_id'])) {
+     if (isset($_COOKIE['user_id']))
+ { $_SESSION['user_id'] = $_COOKIE['user_id']; 
+} else { echo "not_logged_in";
+    exit();} }
 
 require_once "../configs/db.php";
 $user_id = $_SESSION['user_id'];

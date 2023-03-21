@@ -26,9 +26,9 @@
                 ?>
             </div>
             <div class="procent-happy">
-                <p>95% <br> happy dog</p>
-                <p>80% <br> njujnj</p>
-                <p>90% <br> rerrrt</p>
+                <span><p>95% <br> happy dog</p></span>
+                <span><p>80% <br> happy rad</p></span>
+                <span><p>90% <br> happy cat</p></span>
             </div>
         </div>
     </div>

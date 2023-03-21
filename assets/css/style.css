@@ -42,11 +42,24 @@ body{
 }
 .main-container{
 width: 100%;
-margin-top: 150px;
-
+padding-top: 150px;
 display: flex;
   justify-content: center;
+  position: relative;
+    z-index: 1;
 }
+.main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: fixed url(../img/contact/contact1.jpg) repeat;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
 .header-general{
     height: 100px;
     max-width: 1480px;
@@ -64,6 +77,7 @@ position: relative;
     justify-content: space-evenly;
    
     padding: 0 10px;
+    
 }
 .aside-menu{
     width: 300px;
@@ -84,9 +98,13 @@ position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid gray;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    display: flex;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    transform-style: preserve-3d;
 }
 .reviews-client img{
     width: 30%;
@@ -110,13 +128,27 @@ position: relative;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    
+    border-radius: 10px;
+}
+.procent-happy span{
+    width: 150px;
+    height: 150px;
     color: #1d79ca;
     font-size: 50px;
     font-weight: 700;
     line-height: 35px;
-    text-shadow: 6px 6px 8px rgba(255, 255, 255, 1), -6px -6px 8px rgba(255, 255, 255, 1);
-    border-radius: 10px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    transform-style: preserve-3d;
 }
+
 .slider-general {
     height: 400px;
     max-width: 80%;
@@ -126,6 +158,7 @@ position: relative;
     margin: 0;
     flex-shrink: 1 !important;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .logoClient1{
@@ -242,6 +275,8 @@ gap: 20px;
 align-items: flex-start;
 justify-content: space-evenly;
     flex-shrink: 1;
+    padding-bottom: 50px;
+
 }
 .slick-prev {
     font-size: 50px;

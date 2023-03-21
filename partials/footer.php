@@ -47,6 +47,13 @@
   
   <!-- Copyright -->
 </footer>
+            <div id="modal"> 
+                <div id="ModalContent">
+                    <h3>дякую, чекайте на дзвінок продавця</h3>
+                    <button>OK</button>
+                </div>
+            </div>
+
   <a href="#" class="scrolling">UP</a>
   <script src="/assets/js/popper.min.js"></script>
   <script src="/assets/js/jquery.min.js"></script>  <!--тут последня версия jquery -->
