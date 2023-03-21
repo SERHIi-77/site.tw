@@ -40,6 +40,13 @@ function getUserID() {
     }
 }
 
+function getAllbyUser ($adID) {
+    global $conn;
+        $sql = "SELECT * FROM users WHERE id=" . $adID;
+        $result = mysqli_query($conn, $sql);
+        return $user = $result->fetch_assoc();
+}
+
 function getCurrentAd ($adID) {
     global $conn;
         $sql = "SELECT * FROM pets WHERE id=" . $adID;
@@ -54,14 +61,12 @@ function getAllAdsByUser($userID) {
     return $result;
 }
 
-function getAllAdsByFav($userID) {
+function getAllOrdersByPets($petID) {
     global $conn;
-    $sql = "SELECT * FROM pets WHERE owner=" . $userID . " ORDER BY id DESC";
+    $sql = "SELECT * FROM orders WHERE pet=" . $petID . " ORDER BY id DESC";
     $result = mysqli_query($conn, $sql);
     return $result;
 }
-
-
 
 // генерация рандомной строки для создания уникального имени файла
 function generateRandomString($length = 10) {
