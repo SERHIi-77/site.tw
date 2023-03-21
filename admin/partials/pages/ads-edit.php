@@ -3,23 +3,46 @@ $adID = $_SESSION['ad_id'];
 $ad = getCurrentAd ($adID);
 
 if (isset($_POST['edit-submit'])) {
-	// var_dump($_POST);
-  // die();
-    $uUsername = mysqli_real_escape_string($conn, $_POST["username"]);
-    $uEmail = mysqli_real_escape_string($conn, $_POST["email"]);
-    $uPhone = mysqli_real_escape_string($conn, $_POST["phone"]);
-    $uRegion = mysqli_real_escape_string($conn, $_POST["region"]);
-    $uArea = mysqli_real_escape_string($conn, $_POST["area"]);
-    $uLocality = mysqli_real_escape_string($conn, $_POST["locality"]);
-    $uAbout = mysqli_real_escape_string($conn, $_POST["about"]);
-	
-	$sql = "UPDATE users SET username = '" . $uUsername . "', email = '" . $uEmail . "', phone = '" . $uPhone . "', region = '" . $uRegion . "', area = '" . $uArea . "', locality = '" . $uLocality . "', about = '" . $uAbout . "' WHERE id = $userID";
-  //UPDATE `users` SET `phone` = '1', `region` = '1', `area` = '1', `locality` = '1', `avatar` = '2', `tg` = '1', `fb` = '1', `inst` = '1', `about` = '1' WHERE `users`.`id` = 4;
+ var_dump($_POST);
+
+    $photoName = $ad['photo'];
+  // проверка наличия прикрепленнного файла
+  if(!empty($_FILES) && $_FILES['photo']['error'] != 4) {
+       // удаляем старый файл 
+    $filePath = $_SERVER['DOCUMENT_ROOT'] .'/uploads/'.$ad['photo'];
+    if (file_exists($filePath)) {
+        unlink($filePath);
+    }
+    // определяем путь для сохранения картинок
+    $uploaddir = $_SERVER['DOCUMENT_ROOT'] .'/uploads/';
+    // определяем расширение файла картинки
+    $ext = pathinfo($_FILES['photo']['name']);
+    // конструируем имя файла случайный набор символов + текущее время (сек) . расширение
+    $photoName = generateRandomString() . time() . "." . $ext['extension'];
+    // путь + имя файла
+    $uploadfile = $uploaddir . $photoName;
+  
+  // проверка успешной загрузки файла картинки
+      if (!move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile)) {
+          echo "Возможная атака с помощью файловой загрузки!\n";
+          die();
+      }
+  }
+
+    $pTitle = mysqli_real_escape_string($conn, $_POST["title"]);
+    $pAd = mysqli_real_escape_string($conn, $_POST["ad"]);
+    $pBreed = mysqli_real_escape_string($conn, $_POST["breed"]);
+    $pPrice = mysqli_real_escape_string($conn, $_POST["price"]);
+    $pNote = mysqli_real_escape_string($conn, $_POST["note"]);
+	$curDate = date('Y-m-d H:i:s');
+
+	$sql = "UPDATE pets SET title = '" . $pTitle . "', ad = '" . $pAd . "', type = '" . $_POST["type"] . "', sex = '" . $_POST["sex"] . "', age = '" . $_POST["age"] . "', breed = '" . $pBreed . "', price = '" . $pPrice . "', photo = '" . $photoName . "', note = '" . $pNote . "', created = '" . $curDate . "' WHERE id = $adID";
 
 	if (mysqli_query($conn, $sql)) {
     //header("Location: " . $_SERVER['DOCUMENT_ROOT'].'/admin/index.php?p=view-profile');
     //header('Location: ' . $_SERVER['PHP_SELF']);
-    echo('<script> window.location.href = "/admin/index.php?p=view-profile"; </script>');
+    unset($_SESSION['ad_id']);
+    echo('<script> window.location.href = "/admin/index.php?p=ads"; </script>');
 	} else {
 		echo "Error:" . $sql . "<br>" . mysqli_error($conn);
 	}
@@ -91,7 +114,7 @@ if (isset($_POST['edit-submit'])) {
                         </div>
                         <div class="mb-3 row">
                             <div class="text-center" >
-                                <button type="submit" name="submit" class="btn btn-primary">Зберегти</button>
+                                <button type="submit" name="edit-submit" class="btn btn-primary">Зберегти</button>
                             </div>
                         </div>
                     </div>

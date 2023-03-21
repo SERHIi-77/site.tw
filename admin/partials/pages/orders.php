@@ -1,7 +1,5 @@
 <?php
 $ads = getAllAdsByUser(getUserID());
-
-
 ?>
 
 <section class="section">

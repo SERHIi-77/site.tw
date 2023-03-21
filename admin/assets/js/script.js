@@ -12,7 +12,6 @@ form.on('submit', (event) => {
 });
 
 $('#adChengeForm').on('submit', (event) => {
-  alert();
   $('#smModalDelAd').modal('show');
 });
 
