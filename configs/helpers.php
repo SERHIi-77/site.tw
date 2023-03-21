@@ -27,7 +27,6 @@ function getCurrentUser () {
     } else {
         return null;
     }
-    
 }
 
 function getUserID() {
@@ -39,6 +38,13 @@ function getUserID() {
     } else {
         return null;
     }
+}
+
+function getCurrentAd ($adID) {
+    global $conn;
+        $sql = "SELECT * FROM pets WHERE id=" . $adID;
+        $result = mysqli_query($conn, $sql);
+        return $ad = $result->fetch_assoc();
 }
 
 function getAllAdsByUser($userID) {
