@@ -11,6 +11,13 @@ form.on('submit', (event) => {
   }
 });
 
+$('#adChengeForm').on('submit', (event) => {
+  alert();
+  $('#smModalDelAd').modal('show');
+});
+
+
+
 function showModalWindow (params='#smallModalOnAvatar') {
   //$('#smallModalOnAvatar').modal('show');
   $(params).modal('show');
