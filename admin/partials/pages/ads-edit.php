@@ -28,7 +28,7 @@ if (isset($_POST['edit-submit'])) {
 ?>
 
 <div class="my-3 card">
-    <h3 class="card-title text-center"  style="font-size: 1.5rem">Додати оголошення</h3>
+    <h3 class="card-title text-center"  style="font-size: 1.5rem">Редагування оголошення</h3>
     <div class="card-body">
         <!-- <div id="ajaxStatus"></div> -->
         <form class="form-group" action="<?php $_SERVER['DOCUMENT_ROOT'].'/admin/partials/pages/ads-edit.php' ?>" method="POST" id="formAd" form enctype="multipart/form-data">
@@ -77,11 +77,11 @@ if (isset($_POST['edit-submit'])) {
                     </div>
                     <div class="form-group-row">
                         <label for="ad_price">Ціна</label>
-                        <input class="form-control rounded" name="price" id="ad_price"></input>
+                        <input class="form-control rounded" name="price" id="ad_price" value="<?php echo $ad['price'];  ?>"></input>
                     </div>
                     <div class="mb-3 form-group-row">
                         <label for="ad_note">Ваші нотатки</label>
-                        <textarea class="form-control rounded" name="note" id="ad_note" rows="3"></textarea>
+                        <textarea class="form-control rounded" name="note" id="ad_note" rows="3"><?php echo htmlspecialchars($ad['note']); ?></textarea>
                     </div>
                     <div class="form-group-row">
                         <div class="mb-3 row" >
@@ -91,7 +91,7 @@ if (isset($_POST['edit-submit'])) {
                         </div>
                         <div class="mb-3 row">
                             <div class="text-center" >
-                                <button type="submit" name="submit" class="btn btn-primary">Додати оголошення</button>
+                                <button type="submit" name="submit" class="btn btn-primary">Зберегти</button>
                             </div>
                         </div>
                     </div>
