@@ -1,42 +1,83 @@
-              
-              <!-- Slides with captions -->
-              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="assets/img/slides-1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/img/slides-2.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/img/slides-3.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                  </div>
-                </div>
+<?php 
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+switch(true) {
+    case isset($_POST['unFav']):
+        $sql = "DELETE FROM fav WHERE pet = '".$_POST['ad_id']."'";
+        mysqli_query($conn, $sql); 
+        echo('<script> window.location.href = "/admin/index.php?p=favorites"; </script>');
+        break;
+    default:
+      // Код для выполнения в случае, если не был получен ни один из указанных запросов
+      break;
+  }
+                
+$favorites = getAllFavByUser(getUserID());
+while($fav = $favorites->fetch_assoc()): 
+    $ad = getAllbyPet($fav['pet']);
+    //var_dump($ad);
+    $fav_query = 'SELECT COUNT(*) as count FROM fav WHERE pet = '.$ad['id'];
+    $favcount = mysqli_fetch_assoc(mysqli_query($conn, $fav_query))['count'];
+                ?>
 
-              </div><!-- End Slides with captions -->
+
+<form id="adChengeForm" action="<?php $_SERVER['DOCUMENT_ROOT'].'/admin/partials/pages/ads.php' ?>" method="POST">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between">
+            <div>
+                <p>Оголошення створене <em><?php echo($ad['created']);?></em></p>
+            </div>
+            <div>
+                <button type="submit" name="unFav"class="btn btn-danger rounded-pill"><i class="bi bi-trash3"></i> Видалити зі списку</button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="my-auto">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <div class="my-auto d-block ratio">
+                            <img src="/uploads/<?php echo($ad['photo']);?>" class="img-fluid rounded" alt="..." style="height: 300px; width: auto">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $ad['title']; ?></h5>
+                            
+                            <p class="card-text"><?php echo $ad['ad']; ?></p>
+
+                            <p class="card-text"><small><?php echo $ad['note']; ?></small></p>
+
+                            <table class="table table-borderless table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Вид</th>
+                                        <th scope="col">Порода</th>
+                                        <th scope="col">Стать</th>
+                                        <th scope="col">Вік</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><?php echo($ad['type']);?></td>
+                                        <td><?php echo($ad['breed']);?></td>
+                                        <td><?php echo($ad['sex']);?></td>
+                                        <td><?php echo($ad['age']);?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p>Вартість : <strong><?php echo($ad['price']);?></strong> грошових одиниць</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <div><p>Оголошення відзначено <strong><?php echo($favcount);?></strong> разів</p>    
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="ad_id" value="<?php echo($ad['id']);?>">
+</form>
+
+<?php endwhile; ?>
+                    <?php //endwhile; ?>   
