@@ -60,6 +60,11 @@
     align-items: flex-end;
     
 }
+
+.card-product-down span:nth-child(2) {
+    margin-left: 0;
+}
+
 .card-product-down p{
     margin: 0;
 }
