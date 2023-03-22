@@ -2,7 +2,7 @@
 
 switch(true) {
     case isset($_POST['unFav']):
-        $sql = "DELETE FROM fav WHERE pet = '".$_POST['ad_id']."'";
+        $sql = "DELETE FROM fav WHERE id = '".$_POST['fav_id']."'";
         mysqli_query($conn, $sql); 
         echo('<script> window.location.href = "/admin/index.php?p=favorites"; </script>');
         break;
@@ -72,11 +72,11 @@ while($fav = $favorites->fetch_assoc()):
             </div>
         </div>
         <div class="card-footer d-flex justify-content-between">
-            <div><p>Оголошення відзначено <strong><?php echo($favcount);?></strong> разів</p>    
+            <div><p>Оголошення відзначено <strong><?php echo($favcount);?></strong> разів<?php echo($fav['id']);?></p>    
             </div>
         </div>
     </div>
-    <input type="hidden" name="ad_id" value="<?php echo($ad['id']);?>">
+    <input type="hidden" name="fav_id" value="<?php echo($fav['id']);?>">
 </form>
 
 <?php endwhile; ?>
