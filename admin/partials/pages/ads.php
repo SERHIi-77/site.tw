@@ -3,6 +3,10 @@ $ads = getAllAdsByUser(getUserID());
 
 switch(true) {
     case isset($_POST['del_submit']):
+        $filePath = $_SERVER['DOCUMENT_ROOT'] .'/uploads/'.getCurrentAd($_POST['ad_id'])['photo'];
+        if (file_exists($filePath)) {
+            unlink($filePath);
+        }
 
         $sql = "DELETE FROM pets WHERE id = '".$_POST['ad_id']."'";
         mysqli_query($conn, $sql); 
