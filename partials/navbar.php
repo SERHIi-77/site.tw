@@ -39,8 +39,12 @@ $user = getCurrentUser();
             
           } else {
             // выводим ссылочки на Login & Register
-            echo '<a class="btn btn-info rounded-pill" href="partials/pages/login.php">Login</a>';
-            echo '<a class="btn btn-info rounded-pill" href="partials/pages/register.php">Register</a>';
+            ?>
+            <div class="list-group list-group-flush">
+              <a class="list-group-item btn btn-info rounded-pill" href="partials/pages/login.php">Login</a>
+              <a class="list-group-item btn btn-info rounded-pill" href="partials/pages/register.php">Register</a>
+            </div>
+        <?php
         }
       ?>
     </nav>
