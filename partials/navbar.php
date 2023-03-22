@@ -5,7 +5,7 @@
 </div>
 
 <div class="container-user-burger">
-
+<div class="user-avatar" style="background-image: url('/uploads/avatars/avatarK.svg')"></div>
 <nav class="nav justify-content-end">
 <?php
 
@@ -14,8 +14,10 @@ if (isAuth ()){
     $user = getCurrentUser();
 ?>
   <span class="nav-item">
-    <h4> Hello, <br> <?php echo $user['username'] ?></h4>  
+    <h4> Привіт, <br> <?php echo $user['username'] ?></h4><p> <br>ти можешь подати об'яву чи залишити заявку </p> 
   </span>
+  <a class="go-to-admin" href="admin/index.php">Кабінет</a>
+ 
 <?php        
 } else {
 ?>
@@ -25,12 +27,13 @@ if (isAuth ()){
 <?php
     }
 ?>
- 
+  
   <?php 
       // если пользователь зарегистрировался (сессия или куки)  
       if (isAuth ()) {
         // выводим ссылочку на  Logout
-        echo '<a class="nav-link active" href="partials/pages/logout.php">Logout</a>'; 
+        echo '<a class="nav-link active" href="partials/pages/logout.php">Logout</a>';
+        
       } else {
         // выводим ссылочки на Login & Register
         echo '<a class="nav-link active" href="partials/pages/login.php">Login </a>';
