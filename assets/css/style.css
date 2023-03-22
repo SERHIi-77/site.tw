@@ -487,7 +487,7 @@ padding: 5px;
  vertical-align: middle;
   }
   .navbar-change li{
-    height: 21%;
+    height: 20%;
     list-style-type: none;
     text-align: center;
     border-bottom: 0.5px solid #3e77aa;
@@ -544,4 +544,32 @@ background-color: #221f1f ;
     background-color: #221f1f;
     border: 3px solid #3e77aa;
 }
-
+.user-avatar{
+    width: 80px;
+    height: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid red;
+    padding: 10px;
+}
+.go-to-admin{
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 12px ;
+    border: none;
+    border-radius: 5px;
+    transition: background-image 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+  background-image: linear-gradient(to bottom, #22A0E9, #3e77aa);
+  align-items: center;
+}
+.go-to-admin a{
+    text-decoration: none;
+}
