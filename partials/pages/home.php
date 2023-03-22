@@ -46,7 +46,7 @@
     <section class="free-friend">
         <div class="content-free-friend">
 
-            <h3>Друзі не продаються</h3>
+            <h3>Друзі не продаються, забирай мене так!</h3>
             <div class="for-ff-card">
                 
             <?php

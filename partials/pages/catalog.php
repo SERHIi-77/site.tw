@@ -6,29 +6,31 @@
             </div>
 
 <div class="main-container">
-    <div class="led-tronylsya">
+    <div class="led-tronylsya-catalog">
         <div class="aside-menu-catalog">
 
             <div class="filters">
                 
                 <form>
-                    <fieldset>
-                    <legend>КОГО ШУКАЄШ?</legend>
-                    <div class="filter-type-pet">
-                        <label class="input-checkbox-cat"><input type="checkbox" name="type-pet" value="cat"><div class="input-custom"></div>Муркотики</label>
-                        <label class="input-checkbox"><input type="checkbox" name="type-pet" value="dog"><div class="input-custom"></div> Песики</label>
-                        <!-- <label ><input type="checkbox"  name="Terms" checked> -->
-                
+                    <div class="filter-catalog-stat-vik">
+                            <fieldset>
+                            <legend>КОГО ШУКАЄШ?</legend>
+                            <div class="filter-type-pet">
+                                <label class="input-checkbox-cat"><input type="checkbox" name="type-pet" value="cat"><div class="input-custom"></div>Муркотики</label>
+                                <label class="input-checkbox"><input type="checkbox" name="type-pet" value="dog"><div class="input-custom"></div> Песики</label>
+                                <!-- <label ><input type="checkbox"  name="Terms" checked> -->
+                        
+                            </div>
+                            </fieldset>
+                            <fieldset>
+                            <legend>СТАТЬ:</legend>
+                            <div class="filter-sex-type-pet">
+                                <label class="input-checkbox"><input type="checkbox" name="sex-type-pet" value="male"><div class="input-custom"></div> Хлопчики</label>
+                                <label class="input-checkbox-cat"><input type="checkbox" name="sex-type-pet" value="female"><div class="input-custom"></div> дівчатка</label>
+                            </div>
+                            </fieldset>
                     </div>
-                    </fieldset>
-                    <fieldset>
-                    <legend>СТАТЬ:</legend>
-                    <div class="filter-sex-type-pet">
-                        <label class="input-checkbox"><input type="checkbox" name="sex-type-pet" value="male"><div class="input-custom"></div> Хлопчики</label>
-                        <label class="input-checkbox-cat"><input type="checkbox" name="sex-type-pet" value="female"><div class="input-custom"></div> дівчатка</label>
-                    </div>
-                    </fieldset>
-                    <fieldset>
+                    <fieldset class="filter-catalog-vik">
                     <legend>ВІК:</legend>
                     <div class="filter-age-of-pet">
                         <label class="input-checkbox-second"><input type="checkbox" name="age-of-pet" value="less than 3 months"><div class="input-custom"></div>до 3 місяців</label>
@@ -43,21 +45,23 @@
                         <label class="input-checkbox-second"><input type="checkbox" name="age-of-pet" value="over 5 yea"><div class="input-custom"></div>старше 5 років</label>
                     </div>
                     </fieldset>
-                    <fieldset>
-                    <legend>ВАРТІСТЬ:</legend>
-                    <div class="filter-price-pet-parents">
-                        <span>0</span>
-                        <div class="filter-price-pet">
-                            
-                            <input type="range" name="price-min" value="0" min="0" max="7000">
-                            <input type="range" name="price-max" value="7000" min="0" max="7000">
-                            
+                    <div class="filter-catalog-vartist">
+                        <fieldset>
+                        <legend>ВАРТІСТЬ:</legend>
+                        <div class="filter-price-pet-parents">
+                            <span>0</span>
+                            <div class="filter-price-pet">
+                                
+                                <input type="range" name="price-min" value="0" min="0" max="7000">
+                                <input type="range" name="price-max" value="7000" min="0" max="7000">
+                                
+                            </div>
+                            <span class="filter-price-pet-7000" >7000</span>
                         </div>
-                        <span class="filter-price-pet-7000" >7000</span>
-                    </div>
-                    </fieldset>
+                        </fieldset>
                     
-                    <button id="reset-btn">очистити</button>
+                        <button id="reset-btn">очистити</button>
+                    </div>
                 </form>
                 </div>
             </div>

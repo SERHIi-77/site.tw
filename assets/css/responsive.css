@@ -1,0 +1,117 @@
+@media screen and (max-width: 1250px) {
+.led-tronylsya { flex-direction: column-reverse;align-items: center;}
+.aside-menu{flex-direction: row;align-items: center;justify-content: space-evenly;width: 880px;height: 330px;}
+.procent-happy{margin-top: 40px;}
+.free-friend, .dog-friend, .cat-friend, .news-friend{height: 900px;justify-content: space-between;}
+.for-ff-card, .for-dog-card, .for-cat-card, .for-news-card{gap: 20px;}
+.news-blog-content{display: flex;justify-content: flex-start;}
+.content-news-blog-content{display: block;}
+.content-news-blog-content h3{margin-top: 40px;} 
+.for-news-blog-card{width: 90%;height: 100%;display: flex;flex-direction: column;margin: 0 auto;}
+.news-blog-content .content-news-blog-content .for-news-blog-card .grid-item-2{width: 100%; display: flex;flex-direction: row;flex-wrap: nowrap;align-items: center;justify-content: center;margin-bottom: 20px;}
+.news-blog-content .content-news-blog-content .for-news-blog-card  .grid-item-2 .image {width: 25%; padding: 10px; border-radius: 10px; overflow: hidden;}
+.news-blog-content .content-news-blog-content .for-news-blog-card  .grid-item-2 .info-content-big {width: 70%;}
+ .news-blog-content .content-news-blog-content .for-news-blog-card  .grid-item-2 .info-content-big {padding: 10px;height: 90%;margin: 0 auto;}
+.news-blog-content .content-news-blog-content .for-news-blog-card  .grid-item-2 .info-content-big .newshight-text{width: 85%;height: 70px;text-align: center; margin-bottom: 20px;}
+.news-blog-content .content-news-blog-content .for-news-blog-card .grid-item-2 .info-content-big .news-info-text {height: 150px;}
+.contribution-banner .center:before {left: 0px;width: 168px;height: 107px;margin-top: -76.5px;}
+.contribution-banner .center:after {right: 0px;width: 123px;height: 106px;margin-top: -76px;}
+}
+@media screen and (max-width: 1024px) {
+    .contribution-banner .center:before {
+        left: 0px;
+        width: 84px;
+        height: 53px;
+        margin-top: -76.5px;
+    }
+    .contribution-banner .center:after {
+        right: 0px;
+        width: 61px;
+        height: 53px;
+        margin-top: -76px;
+    }
+    .container{flex-wrap: wrap;align-items: center;flex-direction: row-reverse;justify-content: flex-end;}
+    .container h1 img{width: 5%;}
+    .header-general {height: 150px}
+    .container h1 {order: 0; width: 310px;}
+    .container .navbar-change {order: 1;}
+    .search-input {order: -1; padding-top: 15px;height: 60px;}
+    .main-container{padding-top: 180px;}
+    .free-friend, .dog-friend, .cat-friend, .news-friend{height: 1050px;}
+    .input-custom{width: 20px;height: 20px;}
+    .filters{top: 150px;}
+    .scrolling{right: 60px;}
+    .news-blog-content .content-news-blog-content .for-news-blog-card  .grid-item-2 {width: 80%;height: 500px;display: flex; flex-direction: column;align-items:center;margin: 10px auto;}
+    .news-blog-content .content-news-blog-content .for-news-blog-card  .grid-item-2 .info-content-big .info {padding: 10px;width: 90%;margin: 0 auto;text-align: center;}
+    .news-blog-content .grid-item .info .newshight-text {width: 100%;}
+    .news-blog-content .content-news-blog-content .for-news-blog-card .grid-item-2 .image {width: 60%;}
+    .news-blog-content .content-news-blog-content .for-news-blog-card {display: flex;align-items: center;justify-content: flex-start;}
+}
+@media screen and (max-width: 916px) {
+.news-blog-content .grid-item{height: 820px;}
+.procent-happy{justify-content:justify-content;width:95%}
+.aside-menu{width: 90%;}
+.container{margin: 0 auto;}
+.menuBurgerUser{margin-right: 40px;}
+.reviews-client{width: 250px;}
+}
+@media screen and (max-width: 786px){
+    .slider-general {height: 280px;width: 525px;}
+    .slideClient div{width: 525px;height: 259px;}
+    .aside-menu{height: 500px;flex-wrap: wrap;}
+    .reviews-client{width: 290px;}
+    
+    
+
+    
+    .filter-catalog-vik{display: none;}  
+}
+@media screen and (max-width: 700px){
+    .procent-happy span{width: 120px;height: 120px;font-size: 32px;line-height: 30px;}
+    .procent-happy{margin-bottom: 0;}
+    .slick-dotted.slick-slider {margin-bottom: 0px;}.scrolling{font-size: 20px;padding: 10px;}
+    .news-blog-content .grid-item {height: 600px;}
+    .news-blog-content {height: 2500px;}
+    .news-blog-content .grid-item .image {width: 80%;}
+}
+@media screen and (max-width: 700px){
+    .aside-menu{height: 100%;}
+    /* .free-friend, .dog-friend, .cat-friend, .news-friend{height: 2000px;} */
+    .procent-happy {flex-wrap: wrap;}
+    .contribution-banner .center:before {left: -30px;width: 82px;height: 53px;margin-top: -76.5px;}
+    .contribution-banner .center:after {right: -30px;width: 61px;height: 53px;margin-top: -76px;}
+    .contribution-banner .center {padding: 0 60px !important;font-size: 30px;height: 200px;width: 320px;}
+    .contribution-banner .center p {width: 200px;}
+}
+
+@media screen and (max-width: 640px){
+    .free-friend, .dog-friend, .cat-friend, .news-friend {height: 2000px;}
+}
+@media screen and (max-width: 580px){
+    .slider-general {height: 180px;width: 315px;}
+    .slideClient div{width: 315px;height: 168px;}
+    .menuBurgerUser{margin-right: 20px;}
+    .led-tronylsya-catalog {flex-direction: column;}
+    .filters{position: absolute;padding-bottom:0;height: 200px;width: 100%; padding: 0; top:150px;}
+    .aside-menu-catalog {width: 100%;margin-left: 0px;padding-bottom:0;height: 180px;}
+    .filter-catalog-stat-vik, .filter-catalog-vartist{display: flex;justify-content: space-evenly;}
+    .filter-catalog-stat-vik {padding-top: 10px;}
+    .filter-catalog-vartist{display: flex;justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;}
+        #reset-btn{margin-left: -10px;}
+    .filter-catalog-stat-vik legend{display: none;}
+    .contribution-banner .center {
+        padding: 0 !important;
+        font-size: 30px;
+        height: 200px;
+        width: 220px;
+    }
+    .contribution-banner{margin: 0 auto;padding:150px auto;}
+}
+/* //мобильная */
+@media screen and (max-width: 480px){
+    .slider-general {height: 180px;width: 315px;}
+    .slideClient div{width: 315px;height: 168px;}
+
+}

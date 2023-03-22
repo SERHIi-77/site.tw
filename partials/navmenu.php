@@ -30,7 +30,7 @@
         </div>
         <h1 ><img src="/assets/img/header/paw1.svg" alt="paw1"><a href="index.php">Пухнасті лапки</a><img src="/assets/img/header/paw2.svg" alt="paw1"></h1>
         <form id="search-input" class="search-input">
-            <input  type="text" name="query" placeholder="Пощук сайту...">
+            <input  type="text" name="query" placeholder="Пошук сайту...">
             <button  type="submit">Знайти</button>
         </form>
 </div>

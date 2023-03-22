@@ -39,7 +39,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
   <link rel="stylesheet" href="assets/css/style.css"> 
   <link rel="stylesheet" href="assets/css/acidenav.css">
   <link rel="stylesheet" href="assets/css/productcard.css">
-  <link rel="stylesheet" href="assets/css/loginRegistr.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="shortcut icon" type="image/png" href="assets/img/home/black-cat.svg">
 
 </head>
