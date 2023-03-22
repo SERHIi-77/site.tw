@@ -64,6 +64,11 @@
     align-items: flex-end;
     
 }
+
+.card-product-down span:nth-child(2) {
+    margin-left: 0;
+}
+
 .card-product-down p{
     margin: 0;
 }
@@ -75,14 +80,14 @@ background-size: contain;
   background-repeat: no-repeat;
 
 }
-/* .like-hearts .liked{
+.like-hearts-liked{
     height: 20px;
     width: 20px;
     background: url(../img/home/heart-2.svg);
     background-size: contain;
   background-repeat: no-repeat;
     
-} */
+}
 
 .price-and-buy{
     width: 80%;

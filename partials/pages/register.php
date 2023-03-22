@@ -2,9 +2,9 @@
 require($_SERVER['DOCUMENT_ROOT'].'/partials/header.php');
 
 if (!empty($_POST)) {
-  //echo $_POST['name'] . " - " . $_POST['email'] . " - " . $_POST['password'] . "<br>";
+
   $hasPas = password_hash($_POST['password'], PASSWORD_DEFAULT);
-  $sql = "INSERT INTO `users` (`username`, `email`, `password`) VALUES ('" . $_POST['name'] . "', '" . $_POST['email'] . "', '" . $hasPas . "');";
+  $sql = "INSERT INTO users (username, email, phone, password) VALUES ('" . $_POST['name'] . "', '" . $_POST['email'] . "', '" . $_POST['phone'] . "', '" . $hasPas . "');";
   //INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `phone`) VALUES (NULL, '', '', '', '', '');
   if (mysqli_query($conn, $sql)) {
     //echo "Stored." . "<br>";
@@ -38,7 +38,7 @@ mysqli_close($conn);
           <div class="form-group">
             <div class="mb-3">
               <label for="regName" class="form-label">Введіть телефон</label>
-              <input type="tel" name="Telephone" placeholder="Telephone" class="form-control _ge_de_ol">
+              <input type="tel" name="phone" placeholder="Telephone" class="form-control _ge_de_ol" required="true">
             </div>
           </div>
 

@@ -19,8 +19,8 @@ $user = getCurrentUser();
       <span class="nav-item">
         <h4> Привіт, <?php echo $user['username'] ?></h4><p> <br>ти можешь подати об'яву чи залишити заявку </p> 
       </span>
-      <a class="go-to-admin" href="admin/index.php">Кабінет</a>
-      <a class="go-to-admin go-to-admin-gray" href="admin/index.php">На головну</a>
+      <a class="go-to-admin go-to-admin-gray" href="admin/index.php">Кабінет</a>
+      <a class="go-to-admin go-to-admin-gray" href="/index.php">На головну</a>
     <?php        
     } else {
     ?>
@@ -35,15 +35,18 @@ $user = getCurrentUser();
           // если пользователь зарегистрировался (сессия или куки)  
           if (isAuth ()) {
             // выводим ссылочку на  Logout
-            echo '<a class="nav-link active" href="partials/pages/logout.php">Logout</a>';
+            echo '<a class="go-to-admin go-to-admin-gray" href="partials/pages/logout.php">Logout</a>';
             
           } else {
             // выводим ссылочки на Login & Register
-            echo '<a class="nav-link active" href="partials/pages/login.php">Login </a>';
-            echo '<a class="nav-link" href="partials/pages/register.php"> Register</a>';
+            ?>
+            <div class="list-group list-group-flush">
+              <a class="list-group-item btn btn-info rounded-pill" href="partials/pages/login.php">Login</a>
+              <a class="list-group-item btn btn-info rounded-pill" href="partials/pages/register.php">Register</a>
+            </div>
+        <?php
         }
       ?>
-      
     </nav>
   </div>
 </div>
