@@ -33,9 +33,9 @@
                 ?>
             </div>
             <div class="procent-happy">
-                <span><p>95% <br> happy dog</p></span>
-                <span><p>80% <br> happy rad</p></span>
-                <span><p>90% <br> happy cat</p></span>
+                <span class="light-card"><p>95% <br> happy dog</p></span>
+                <span class="light-card"><p>80% <br> happy ratt</p></span>
+                <span class="light-card"><p>90% <br> happy cat</p></span>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
 
 
 <div class="main-home">
-    <section class="free-friend">
+    <section class="section free-friend">
         <div class="content-free-friend">
 
             <h3>Друзі не продаються, забирай мене так!</h3>
@@ -57,7 +57,7 @@
         </div>
     
     </section>
-    <section class="dog-friend">
+    <section class=" dog-friend">
         <div class="content-dog-friend">
             <h3>Друзі песики</h3>
             <div class="for-dog-card">
@@ -67,7 +67,7 @@
             </div>
         </div>
     </section>
-    <section class="cat-friend">
+    <section class="section3 cat-friend">
         <div class="content-cat-friend">
             <h3>Друзі котейкі</h3>
             <div class="for-cat-card">
@@ -78,7 +78,7 @@
         </div>
     </section>
 
-    <section class="news-friend">
+    <section class="section4 news-friend">
         <div class="content-news-friend">
             <h3>Щукаємо друзів</h3>
             <div class="for-news-card">
@@ -88,7 +88,7 @@
             </div>   
         </div>
     </section>
-    <section class="news-blog-content">
+    <section class="section5 news-blog-content">
         <div class="content-news-blog-content">
             <h3>Новини пушистого світу</h3>
             <div class="for-news-blog-card">

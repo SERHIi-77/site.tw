@@ -95,3 +95,15 @@ $(function(){
       $(".scrolling").fadeOut(400);
   })
 })
+
+
+// карточки
+
+VanillaTilt.init(document.querySelectorAll(".product-card"), {
+  max: 25,
+      speed: 8000,
+      easing:"cubic-bezier(.03,.98,.52,.99)",
+      perspective:500,
+      transition:true
+  });
+

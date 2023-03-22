@@ -38,8 +38,9 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css"> 
   <link rel="stylesheet" href="assets/css/acidenav.css">
-  <link rel="stylesheet" href="assets/css/productcard.css">
+  <link rel="stylesheet" href="assets/css/productcard.css">lightcard.css
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/lightcard.css">
   <link rel="shortcut icon" type="image/png" href="assets/img/home/black-cat.svg">
 
 </head>

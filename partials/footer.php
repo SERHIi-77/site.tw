@@ -47,7 +47,12 @@
   
   <!-- Copyright -->
 </footer>
-
+            <div id="modal"> 
+                <div id="ModalContent">
+                    <h3>дякую, чекайте на дзвінок продавця</h3>
+                    <button>OK</button>
+                </div>
+            </div>
 
   <a href="#" class="scrolling">UP</a>
   <script src="/assets/js/popper.min.js"></script>
@@ -55,7 +60,8 @@
   <script src="/assets/js/bootstrap.min.js"></script>
   <!-- <script src="/assets/js/bootstrap.bundle.min.js"></script> -->
   <script type="text/javaScript" src="/assets/slick/slick.min.js"></script>
-
+  <script src="https://kit.fontawesome.com/bad7f7f5d4.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-3.6.4.min.js"></script>

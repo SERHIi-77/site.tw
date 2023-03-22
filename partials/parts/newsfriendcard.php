@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT * FROM pets WHERE id IN (26, 27, 28, 29) ORDER BY created DESC";
+$sql = "SELECT * FROM pets WHERE id IN (25, 26, 27, 28) ORDER BY created DESC";
 $result = $conn->query($sql);
 
 if($result = $conn->query($sql)):
