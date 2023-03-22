@@ -1,3 +1,7 @@
+<?php
+$userID = getUserID();
+?>
+
             <div id="modal"> 
                 <div id="ModalContent">
                     <h3>дякую, чекайте на дзвінок продавця</h3>
@@ -75,16 +79,16 @@ if($result = $conn->query($sql)):
     foreach($result as $pet):
 
         $favSQL = 'SELECT COUNT(*) as count FROM fav WHERE pet =' . $pet['id'];
-        // получаем общее количество лайков
+        // получаем общее количество лайков для текущего зверя
         $countFav = mysqli_fetch_assoc(mysqli_query($conn, $favSQL))['count'];
         
-        // if(isset($_COOKIE['user'])) {
-        //     $likeUserSQL = 'SELECT count (*) as total FROM user_post_likes WHERE post_id=' . $row['id'] . 'user_id=' . $_COOKIE['user'];
-        //     // непонятная часть кода ???
-        //     $likeUserResult = $conn->query($likesSQL);
+        // if(isAuth ()) {
+        //     echo $pet['id'].'<br>';
+        //     echo $userID;
+        //     $likeUserSQL = 'SELECT * FROM fav WHERE pet =' . $pet['id'] . 'AND' . 'user =' . $userID;
+        //     // получаем информацию есть ли лайк пользователя у текущего зверя
+        //     $likeUser = $conn->query($likeUserSQL);
         // }
-
-
 
 ?>
             <!-- стандартная карточка товара/ аналог карточки статьи в блоге в 13 уроке- подтянет данные из бд -->
@@ -103,8 +107,13 @@ if($result = $conn->query($sql)):
                 </div>
                 <div class="card-product-down">
 
-                    <span id="heartBtn" class="like-hearts favorite" data-pet="<?php echo $pet['id']; ?>"></span>
-                    
+                    <span id="heartBtn" class="like-hearts
+                    <!-- <?php if(isset($likeUser)) {
+                            echo "-liked";
+                        }
+                    ?> -->
+                    favorite" data-pet="<?php echo $pet['id']; ?>"></span>
+
                     <span><?php echo $countFav ?></span>
 
                     <i><p><?php echo ($pet['created']);?></p></i>

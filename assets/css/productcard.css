@@ -76,14 +76,14 @@ background-size: contain;
   background-repeat: no-repeat;
 
 }
-/* .like-hearts .liked{
+.like-hearts-liked{
     height: 20px;
     width: 20px;
     background: url(../img/home/heart-2.svg);
     background-size: contain;
   background-repeat: no-repeat;
     
-} */
+}
 
 .price-and-buy{
     width: 80%;
