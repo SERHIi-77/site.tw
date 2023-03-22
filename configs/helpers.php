@@ -40,12 +40,21 @@ function getUserID() {
     }
 }
 
-function getAllbyUser ($adID) {
+function getAllbyUser ($iD) {
     global $conn;
-        $sql = "SELECT * FROM users WHERE id=" . $adID;
+        $sql = "SELECT * FROM users WHERE id=" . $iD;
         $result = mysqli_query($conn, $sql);
         return $user = $result->fetch_assoc();
 }
+
+function getAllbyPet ($iD) {
+    global $conn;
+        $sql = "SELECT * FROM pets WHERE id=" . $iD;
+        $result = mysqli_query($conn, $sql);
+        return $user = $result->fetch_assoc();
+}
+
+
 
 function getCurrentAd ($adID) {
     global $conn;
@@ -57,6 +66,13 @@ function getCurrentAd ($adID) {
 function getAllAdsByUser($userID) {
     global $conn;
     $sql = "SELECT * FROM pets WHERE owner=" . $userID . " ORDER BY id DESC";
+    $result = mysqli_query($conn, $sql);
+    return $result;
+}
+
+function getAllFavByUser($userID) {
+    global $conn;
+    $sql = "SELECT * FROM fav WHERE user=" . $userID . " ORDER BY id DESC";
     $result = mysqli_query($conn, $sql);
     return $result;
 }

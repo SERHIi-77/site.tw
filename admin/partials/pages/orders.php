@@ -18,7 +18,8 @@ $ads = getAllAdsByUser(getUserID());
                         <!-- Accordion -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading<?php echo $ad['id']; ?>">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $ad['id']; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $ad['id']; ?>">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $ad['id']; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $ad['id']; ?>">
                             <p><strong>Заявка #(<?php echo $ord['id']; ?>)</strong> створена <em><small><?php echo $ord['created']; ?></small></em></p>
                             </button>
                         </h2>
