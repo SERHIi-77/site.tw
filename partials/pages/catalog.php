@@ -104,6 +104,7 @@ if($result = $conn->query($sql)):
                 <div class="card-product-down">
 
                     <span id="heartBtn" class="like-hearts favorite" data-pet="<?php echo $pet['id']; ?>"></span>
+                    
                     <span><?php echo $countFav ?></span>
 
                     <i><p><?php echo ($pet['created']);?></p></i>
