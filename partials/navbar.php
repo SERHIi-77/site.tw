@@ -20,7 +20,7 @@ $user = getCurrentUser();
         <h4> Привіт, <?php echo $user['username'] ?></h4><p> <br>ти можешь подати об'яву чи залишити заявку </p> 
       </span>
       <a class="go-to-admin" href="admin/index.php">Кабінет</a>
-      <a class="go-to-admin go-to-admin-gray" href="admin/index.php">На головну</a>
+      <a class="go-to-admin go-to-admin-gray" href="/index.php">На головну</a>
     <?php        
     } else {
     ?>
