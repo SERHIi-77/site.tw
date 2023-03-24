@@ -112,7 +112,7 @@ if($result = $conn->query($sql)):
                             // var_dump($heartUser); //$heartUserResult->fetch_assoc()['total'] > 0
                             echo "-liked ";
                         }
-                    ?>" data-pet="<?php echo $pet['id']; ?>"></span>
+                    ?>" data-pet-id="<?php echo $pet['id']; ?>"></span>
 
                     <span><?php echo $countFav ?></span>
 

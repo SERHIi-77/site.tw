@@ -72,6 +72,7 @@
   
   <script src="/assets/js/slider.js"></script>
   <script src="/assets/js/navfiltr.js"></script>
+  <script src="/assets/js/heart.js"></script>
 
   
 
