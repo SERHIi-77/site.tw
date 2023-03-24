@@ -82,13 +82,14 @@ if($result = $conn->query($sql)):
         // получаем общее количество лайков для текущего зверя
         $countFav = mysqli_fetch_assoc(mysqli_query($conn, $favSQL))['count'];
         
-        // if(isAuth ()) {
-        //     echo $pet['id'].'<br>';
-        //     echo $userID;
-        //     $likeUserSQL = 'SELECT * FROM fav WHERE pet =' . $pet['id'] . 'AND' . 'user =' . $userID;
-        //     // получаем информацию есть ли лайк пользователя у текущего зверя
-        //     $likeUser = $conn->query($likeUserSQL);
-        // }
+        if(isAuth ()) {
+            //$heartUserSQL = 'SELECT pet FROM fav WHERE user =' . $userID;
+            $heartUserSQL = 'SELECT * FROM fav WHERE pet =' . $pet['id'] . ' AND ' . 'user =' . $userID;
+            // $heartUserSQL = "SELECT * FROM fav WHERE pet = '{$pet['id']}' AND user = '{$userID}'";
+            // получаем информацию есть ли лайк пользователя у текущего зверя
+            $heartUser = $conn->query($heartUserSQL);
+            var_dump ($heartUser);
+        }
 
 ?>
             <!-- стандартная карточка товара/ аналог карточки статьи в блоге в 13 уроке- подтянет данные из бд -->
@@ -107,12 +108,11 @@ if($result = $conn->query($sql)):
                 </div>
                 <div class="card-product-down">
 
-                    <span id="heartBtn" class="like-hearts
-                    <!-- <?php if(isset($likeUser)) {
-                            echo "-liked";
+                    <span id="heartBtn" class="like-hearts<?php if(isset($heartUser) && mysqli_num_rows($heartUser) > 0) {
+                            // var_dump($heartUser); //$heartUserResult->fetch_assoc()['total'] > 0
+                            echo "-liked ";
                         }
-                    ?> -->
-                    favorite" data-pet="<?php echo $pet['id']; ?>"></span>
+                    ?>" data-pet="<?php echo $pet['id']; ?>"></span>
 
                     <span><?php echo $countFav ?></span>
 
