@@ -112,7 +112,7 @@ if($result = $conn->query($sql)):
                     <span class="like-hearts<?php if(isset($heartUser) && mysqli_num_rows($heartUser) > 0) {
                             echo "-liked ";
                         }
-                    ?>" data-pet-id="<?php echo $pet['id']; ?>"><span class = "btnHeart" ></span></span>
+                    ?>" data-pet-id="<?php echo $pet['id']; ?>"><i class="icon-heart"></i><span class = "btnHeart" ></span></span>
                     
                     <span><?php echo $countFav ?></span>
 

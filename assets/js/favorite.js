@@ -2,7 +2,6 @@ $('.btnHeart').parent().on('click', function() {
     // Получаем идентификатор животного
     const petId = $(this).data('pet-id');
     // Отправляем AJAX запрос на сервер для проверки наличия значения в БД
-    alert(petId);
     $.ajax({
       url: '/actions/favorite.php',
       method: 'POST',
