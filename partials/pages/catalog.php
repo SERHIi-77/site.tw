@@ -88,7 +88,7 @@ if($result = $conn->query($sql)):
             // $heartUserSQL = "SELECT * FROM fav WHERE pet = '{$pet['id']}' AND user = '{$userID}'";
             // получаем информацию есть ли лайк пользователя у текущего зверя
             $heartUser = $conn->query($heartUserSQL);
-            var_dump ($heartUser);
+            
         }
 
 ?>
@@ -108,12 +108,12 @@ if($result = $conn->query($sql)):
                 </div>
                 <div class="card-product-down">
 
-                    <span id="heartBtn" class="like-hearts<?php if(isset($heartUser) && mysqli_num_rows($heartUser) > 0) {
-                            // var_dump($heartUser); //$heartUserResult->fetch_assoc()['total'] > 0
+                    
+                    <span class="like-hearts<?php if(isset($heartUser) && mysqli_num_rows($heartUser) > 0) {
                             echo "-liked ";
                         }
-                    ?>" data-pet-id="<?php echo $pet['id']; ?>"></span>
-
+                    ?>" data-pet-id="<?php echo $pet['id']; ?>"><span class = "btnHeart" ></span></span>
+                    
                     <span><?php echo $countFav ?></span>
 
                     <i><p><?php echo ($pet['created']);?></p></i>
