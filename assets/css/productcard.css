@@ -85,7 +85,8 @@ background-size: contain;
     width: 20px;
     background: url(../img/home/heart-2.svg);
     background-size: contain;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    color: red;
     
 }
 
