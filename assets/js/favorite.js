@@ -1,4 +1,5 @@
 $('.btnHeart').parent().on('click', function() {
+    const parent = $(this);
     // Получаем идентификатор животного
     const petId = $(this).data('pet-id');
     // Отправляем AJAX запрос на сервер для проверки наличия значения в БД
@@ -9,13 +10,13 @@ $('.btnHeart').parent().on('click', function() {
       success: function(response) {
         switch (response.status) {
             case 'unliked':
-                $(this).parent().removeClass('-liked');
+                parent.removeClass('-liked');
                 break;
             case 'liked':
-                $(this).parent().addClass('-liked');
+                parent.addClass('-liked');
                 break;
             default:
-                $(this).parent().removeClass('-liked');
+                parent.removeClass('-liked');
                 break;
 
             };

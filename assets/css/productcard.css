@@ -74,10 +74,11 @@
 }
 .like-hearts{
     height: 20px;
-width: 20px;
-background: url(../img/home/heart-1.svg);
-background-size: contain;
-  background-repeat: no-repeat;
+    width: 20px;
+    background: url(../img/home/heart-1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: antiquewhite;
 
 }
 .like-hearts-liked{

@@ -41,7 +41,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/configs/helpers.php');
   <link rel="stylesheet" href="assets/css/productcard.css">lightcard.css
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/lightcard.css">
-  <link rel="shortcut icon" type="image/png" href="assets/img/home/black-cat.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="assets/img/home/cat-icon.svg">
 
 </head>
 

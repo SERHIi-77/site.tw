@@ -31,7 +31,7 @@
 
                     
                     <span class="like-hearts<?php if(isset($heartUser) && mysqli_num_rows($heartUser) > 0) {
-                            echo "-liked ";
+                            echo '-liked';
                         }
                     ?>" data-pet-id="<?php echo $pet['id']; ?>"><span class = "btnHeart" ><i class="bi bi-suit-heart-fill"></i></span></span>
                     
